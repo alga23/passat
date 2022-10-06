@@ -1,0 +1,45 @@
+la Clara és més jove que tu
+
+edatClara < mevaEdat
+
+_____________________
+
+la Clara i el Marc són més joves que tu
+
+edatClara && edatMarc < mevaEdat
+
+_____________________
+
+la Clara no és més jove que el Marc
+
+edatClara > edatMarc
+
+______________________
+
+no és cert que el Marc sigui més jove que la Clara
+
+!(edatMarc < edatClara)
+
+_____________________
+
+Ni el Marc és més jove que la Clara ni tu ets més jove que el Marc
+
+!(edatMarc< edatClara) && !(mevaEdat < edatMarc)
+
+_____________________
+
+Tu ets més gran que la Clara i el Marc junts o bé la Clara i el Marc tenen la mateixa edat
+
+mevaedat > edatClara && mevaEdat > edatMarc || edatClara == edatMarc
+
+________________________
+
+Els meus pares tenen la mateixa edat i el meu germa i jo no
+
+edatPare == edatMare && mevaEdat != edatGerma
+
+_________________________
+
+Tinc més diners que el meu amic pero no que la meva amiga
+
+meusDiners > dinersmeuAmic && meusDiners < dinersMevaAmiga
