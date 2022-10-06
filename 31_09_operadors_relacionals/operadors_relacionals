@@ -1,0 +1,95 @@
+la teva edat és superior als 18 anys
+
+mevaEdat > 18
+
+mevaEdat => majorEdat
+
+________________________________________ 
+
+tens menys de 5 germans
+
+nombreGermans < 5
+
+fillsPareiMareSenseMi  < 5
+
+_______________________________________ 
+la suma de 2 més 5 és igual a 7
+
+resultat7 = 2+5
+
+5+2 = 2+5
+
+________________________________________
+
+la suma de 2 més 5 és diferent de 7
+
+2+5 != 7
+
+5+2 != 2+5
+
+________________________________________
+
+l'any que ve seràs major d'edat
+
+AnyQueVaisNeixer + 18 == AnyQueVe
+
+anyOnSerasMajorEdat == anyActual + 1
+
+_______________________________________
+
+l'any passat encara no eres major d'edat
+
+
+edatAnyAnterior < 18
+
+ultimANyOnEraMenordEdat < (anyActual -1)
+
+_______________________________________
+
+tens com a molt 35 companys a classe
+
+companysAClasse == 35
+
+34 <=companysAClasse <=35
+
+_______________________________________
+
+tens tants companys a classe com anys
+
+nombreAnys == companysAClasse
+
+1 * 35 == mevaEdat
+
+_______________________________________
+
+el Renat té quatre potes
+
+4 == potesRenat
+
+potesGatNormal == potesRenat
+
+_______________________________________
+
+estem a més de 28 graus
+
+temperaturaAmbient > 28
+
+temperaturaAmbient != (temperaturaAmbient < 28)
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
