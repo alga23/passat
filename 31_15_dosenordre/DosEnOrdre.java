@@ -10,11 +10,11 @@ public class DosEnOrdre {
         int segon = Integer.parseInt(Entrada.readLine());
 
         if (primer > segon) {
-        	System.out.println(primer + " i " + segon);
+        	System.out.println(segon + " i " + primer);
         	}
         
         else if (primer < segon) {
-        	System.out.println(segon + " i " + primer);
+        	System.out.println(primer + " i " + segon);
         	}
         
         else if (primer == segon) {
