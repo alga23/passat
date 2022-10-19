@@ -39,7 +39,7 @@ public class DiaSetmana {
 			
 		//diumenge
 		else if (numero == 7) {
-			System.out.println("Divendres");	
+			System.out.println("Diumenge");	
 			}
 			
 		//qualsevol entrada que no sigui un dels set nombres inclosos
