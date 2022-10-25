@@ -17,16 +17,16 @@ public class CalculadoraSenzilla {
             double resultat = operand1 + operand2;
             System.out.println(operand1 + " + " + operand2 + " = " + resultat);
         } else if (operador == '-') {
-            double resultat = operand1 + operand2;
+            double resultat = operand1 - operand2;
             System.out.println(operand1 + " - " + operand2 + " = " + resultat);
         }else if (operador == '*') {
-            double resultat = operand1 + operand2;
+            double resultat = operand1 * operand2;
             System.out.println(operand1 + " * " + operand2 + " = " + resultat);
        }else if (operador == '/') {
-            double resultat = operand1 + operand2;
+            double resultat = operand1 / operand2;
             System.out.println(operand1 + " / " + operand2 + " = " + resultat);
        }else if (operador == '%') {
-            double resultat = operand1 + operand2;
+            double resultat = operand1 % operand2;
             System.out.println(operand1 + " % " + operand2 + " = " + resultat);
             }
 	}
