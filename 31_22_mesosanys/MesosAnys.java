@@ -17,6 +17,7 @@ public class MesosAnys {
 		
 		if (mes >=12) {
 			mesSegüent = 1;
+			any = anySegüent;
 			
 			}
 		else if (mes == 1) {
