@@ -5,7 +5,7 @@
 /utilitzar el switch i no el condicionals if, else if i else
 */
 
-public class DiaSetmana {
+public class DiaSetmanaSwitchExpr{
 	public static void main (String[] args) {
 		int numero = Integer.parseInt(args[0]);
 		switch(numero) {
