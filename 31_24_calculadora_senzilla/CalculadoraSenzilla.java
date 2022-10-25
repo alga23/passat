@@ -34,7 +34,7 @@ public class CalculadoraSenzilla {
             String resultat = "No es pot dividir entre 0";
 	    System.out.println(resultat);
        }else if (operador != '+' && operador != '-' && operador != '*' && operador != '/') {
-              System.out.println("L'operador " + operador + " no esta disponible"); 
+              System.out.println("L'operador " + operador + " no està disponible"); 
 			}
 		}
 	}
