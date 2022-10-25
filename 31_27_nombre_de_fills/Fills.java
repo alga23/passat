@@ -27,7 +27,7 @@ public class Fills {
 			   
 			   
 			else if (fills > 4){
-			   System.out.println("Tu sí fas paísS");
+			   System.out.println("Tu sí fas país");
 			  
 			   
 			  }
