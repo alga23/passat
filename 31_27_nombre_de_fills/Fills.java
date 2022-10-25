@@ -12,7 +12,7 @@ public class Fills {
 			   }
 			 
 			 else if (fills == 0){
-			   System.out.println("Tot el que t'has estalviat en 				bolquers!");
+			   System.out.println("Tot el que t'has estalviat en bolquers!");
 			   }
 			 
 			  
