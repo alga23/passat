@@ -19,7 +19,7 @@ public class MesosAnys {
 			int mesSegüent = 1;
 			int anySegüent = any +1;
 			mes = mes -1;
-			System.out.println("Mes anterior "  + mes+ "/" + any + " i mes següent " + mesSegüent + "/" + any);
+			System.out.println("Mes anterior "  + mes+ "/" + any + " i mes següent " + mesSegüent + "/" + anySegüent);
 			}
 		else {
 		
