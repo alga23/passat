@@ -40,6 +40,10 @@ public class Ascensor {
 			System.out.println("planta baixa");
 			}
 			
+		else if (pis == "planta baixa" && boto == "pujar un") {
+			System.out.println("primer pis");
+			} 
+			
 		else {
 			System.out.println("error");
 			}
