@@ -44,7 +44,7 @@ public class Ascensor {
 			System.out.println("primer pis");
 			} 
 			
-		else {
+		else  {
 			System.out.println("error");
 			}
 		}
