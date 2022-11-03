@@ -21,7 +21,7 @@ public class SumaPositius {
 
         // processem el primer valor
 
-        System.out.println("Introdueix un valor");
+        System.out.println("Introdueix el primer valor");
 
         valor = Integer.parseInt(Entrada.readLine());
 
@@ -32,7 +32,7 @@ public class SumaPositius {
 
             // processem el segon valor
 
-            System.out.println("Introdueix un valor");
+            System.out.println("Introdueix el segon valor");
 
             valor = Integer.parseInt(Entrada.readLine());
 
@@ -42,7 +42,7 @@ public class SumaPositius {
                 
                 // processem el tercer valor
 
-            System.out.println("Introdueix un valor");
+            System.out.println("Introdueix el tercer valor");
 
             valor = Integer.parseInt(Entrada.readLine());
 
