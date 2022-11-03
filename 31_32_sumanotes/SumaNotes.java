@@ -23,7 +23,7 @@ public class SumaNotes {
 
         // ves sumant mentre la nota estigui entre el 0 i el 100
 
-        while (0 < nota && nota < 100) {
+        while (0 <= nota && nota <= 100) {
 
             suma = suma + nota;
 
