@@ -24,13 +24,13 @@ public class QuantsParells {
        
        //inicialitzem el bucle
        
-       while (valor - valor == 0) {
+       while (valor - mateixValor == 0) {
 
             System.out.println("Introdueix valor");
 
             valor = Integer.parseInt(Entrada.readLine());
 
-            if (valor  - valor == 0) {
+            if (valor  - mateixValor == 0) {
 
                 suma++;
 
