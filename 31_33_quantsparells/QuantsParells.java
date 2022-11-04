@@ -10,7 +10,7 @@ public class QuantsParells {
 			System.out.println("Introdueix un valor");
 			int valor = Integer.parseInt(Entrada.readLine());
 			
-			if (valor > 0) {
+			if (valor >= 0) {
 				if ( valor % 2 == 0) {
 					suma++;
 					}
