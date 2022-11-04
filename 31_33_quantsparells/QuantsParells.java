@@ -3,42 +3,23 @@
 */
 public class QuantsParells {
 	public static void main (String [] args) {
+		int suma = 0;
+		boolean valorPositiu = true;
 		
-		
-	// creem la variable on guardarem el resultat de sumar
-
-        int suma = 0;   // inicialment no hem sumat res i per tant és 0
-        
-        
-        // demanem un valor
-
-        System.out.println("Introdueix un valor");
-
-        int valor = Integer.parseInt(Entrada.readLine());
-        
-       
-       //farem una variable amb el mateix valor
-       
-       int mateixValor = valor;
-       
-       
-       //inicialitzem el bucle
-       
-       while (valor - mateixValor == 0) {
-
-            System.out.println("Introdueix valor");
-
-            valor = Integer.parseInt(Entrada.readLine());
-
-            if (valor  - mateixValor == 0) {
-
-                suma++;
-
-            }
-
-        }
-
-        System.out.println("Nombre de parells introduïts:" + suma);
-        }
-       }	
+		while (valorPositiu) {
+			System.out.println("Introdueix un valor");
+			int valor = Integer.parseInt(Entrada.readLine());
+			
+			if (valor > 0) {
+				if ( valor % 2 == 0) {
+					suma++;
+					}
+				}
+				else {
+					valorPositiu = false;
+					System.out.println("Nombre de parells introduïts: " + suma);
+			}
+		 }
+       }
+      }
        	
