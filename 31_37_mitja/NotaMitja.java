@@ -8,7 +8,7 @@ public class NotaMitja {
 	// demanem una nota
 
 
-        System.out.println("Introdueix una nota");
+        System.out.println("Introdueix un valor");
 
         int nota = Integer.parseInt(Entrada.readLine());
         
