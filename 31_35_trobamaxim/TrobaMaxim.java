@@ -9,7 +9,7 @@ public class TrobaMaxim {
 		int valor = Integer.parseInt(Entrada.readLine());
 		int maxim = valor;
 		if (valor < 0) {
-			maxim = valor;
+			maxim = 0;
 			}
 		
 		while (valor > 0) {
