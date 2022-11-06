@@ -16,6 +16,9 @@ public class NotaMitja {
         System.out.println("Introdueix una nota");
 
         int nota = Integer.parseInt(Entrada.readLine());
+        
+        if (nota < 0) {
+        	System.out.println("Cap nota vàlida introduïda");
 
 
         // ves sumant mentre la nota estigui entre el 0 i el 100
@@ -40,4 +43,5 @@ public class NotaMitja {
 
     }
 
+}
 }
