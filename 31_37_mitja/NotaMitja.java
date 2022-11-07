@@ -17,7 +17,7 @@ public class NotaMitja {
         		}
         		
         	
-        	while (0 <= nota || nota <= 100) {
+        	while (0 <= nota && nota <= 100) {
 
             		suma = suma + nota;
             		contador++;
@@ -29,7 +29,7 @@ public class NotaMitja {
 
         	}
         	if (0 >=nota || nota >= 100){
-        	        System.out.println("La mitja de les notes vàlides és " + divisio);
+        	        System.out.println("La mitjana de les notes vàlides és " + divisio);
         	        }
         	       }
         	      }
