@@ -16,7 +16,7 @@ public class EndevinaNombre {
 	 		//programen tots els possibles 
 	 		//camins que l'usuari pot tomar
 	 		 if (nombre < nombreAEndevinar) {
-	 		 	if (nombre >100) {
+	 		 	if (nombre < 0) {
 	 		 		System.out.println("Com a mínim 1");
 	 		 		}
 	 		 	else {
