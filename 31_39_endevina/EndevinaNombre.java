@@ -20,7 +20,7 @@ public class EndevinaNombre {
 	 		 		System.out.println("Com a mínim 1");
 	 		 		}
 	 		 	else {
-	 		 	System.out.println("És més petit que " + nombre);
+	 		 	System.out.println("És més gran que " + nombre);
 	 		 	}
 	 		 }
 
@@ -29,7 +29,7 @@ public class EndevinaNombre {
 	 		 		System.out.println("Com a màxim 100");
 	 		 		}
 	 		 	else {
-	 		 	System.out.println("És més gran que " + nombre);
+	 		 	System.out.println("És més petit que " + nombre);
 	 		 	}
 	 		 }
 	 		 
