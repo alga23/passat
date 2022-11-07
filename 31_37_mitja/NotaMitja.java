@@ -17,7 +17,7 @@ public class NotaMitja {
         		}
         		
         	
-        	while (0 <= nota && nota <= 100) {
+        	while (0 <= nota || nota <= 100) {
 
             		suma = suma + nota;
             		contador++;
