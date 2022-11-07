@@ -26,10 +26,10 @@ public class EndevinaNombre {
 	 			System.out.println("Com a mínim 1");
 	 			}
 	 		else if (nombre > 100) {
-	 			System.out.println("Com a maxim 100");
+	 			System.out.println("Com a màxim 100");
 	 			}
 	 		else if (nombre == nombreAEndevinar) {
-	 			System.out.println("Has encertat");
+	 			System.out.println("Has encertat!");
 	 			}
 	 		}
 	 	}
