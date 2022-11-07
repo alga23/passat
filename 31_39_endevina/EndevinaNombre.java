@@ -15,16 +15,18 @@ public class EndevinaNombre {
 	 		
 	 		//programen tots els possibles 
 	 		//camins que l'usuari pot tomar
+	 		 if (nombre == 0) {
+	 			System.out.println("Com a mínim 1");
+	 			}
 	 		
-	 		if (nombre < nombreAEndevinar) {
+	 		else if (nombre < nombreAEndevinar) {
 	 			System.out.println("És més gran que " + nombre);
 	 			}
 	 		else if (nombre > nombreAEndevinar) {
 	 			System.out.println("És més petit que " + nombre);
 	 			}
-	 		else if (nombre == 0) {
-	 			System.out.println("Com a mínim 1");
-	 			}
+	 		
+	 	
 	 		else if (nombre > 100) {
 	 			System.out.println("Com a màxim 100");
 	 			}
