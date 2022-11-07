@@ -5,6 +5,7 @@
 public class EndevinaNombre {
 	public static void main(String[] args) {
 		//posem els primer dos nombres
+		System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
 		int nombreAEndevinar = 42;
 		int nombre = 0;
 		
