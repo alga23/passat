@@ -2,7 +2,7 @@
 /.Li donarem diferents respostes depenent del número que li posi l'usuari
 /i el programa acabarà quan l'usuari ho endevini el nombre
 */
-public class Endevina {
+public class EndevinaNombre {
 	public static void main(String[] args) {
 		//posem els primer dos nombres
 		int nombreAEndevinar = 42;
