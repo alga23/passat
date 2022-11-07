@@ -9,7 +9,7 @@ public class NotaMitja {
 	 	int contador = 0;
 	 	int divisio = 0;
 	 	
-	 	System.out.println("Introdueix una nota");
+	 	System.out.println("Introdueix un valor");
 
         	int nota = Integer.parseInt(Entrada.readLine());
         	if (nota < 0) {
@@ -22,7 +22,7 @@ public class NotaMitja {
             		suma = suma + nota;
             		contador++;
             		divisio = suma/contador;
-			System.out.println("Introdueix una nota");
+			System.out.println("Introdueix un valor");
 
             		nota = Integer.parseInt(Entrada.readLine());
             		
