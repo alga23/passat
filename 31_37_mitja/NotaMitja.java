@@ -4,49 +4,26 @@
 */
 public class NotaMitja {
 	public static void main (String[] args) {
-	  boolean bucle = true;
-	// demanem una nota
+	 
+	 	int suma = 0;
+	 	int contador = 0;
+	 	int divisio = 0;
+	 	
+	 	System.out.println("Introdueix una nota");
 
+        	int nota = Integer.parseInt(Entrada.readLine());
+        	
+        	while (0 <= nota && nota <= 100) {
 
-        System.out.println("Introdueix un valor");
+            		suma = suma + nota;
+            		contador++;
+            		divisio = suma/contador;
+			System.out.println("Introdueix una nota");
 
-        int nota = Integer.parseInt(Entrada.readLine());
-        
-        if (nota < 0 && nota > 100) {
-        	System.out.println("Cap nota vàlida introduïda");
-        	bucle = false;
+            		nota = Integer.parseInt(Entrada.readLine());
+            		
+
         	}
-        
-        int suma = 0; 
-        int contador = 0;
-
-
-
-        // ves sumant mentre la nota estigui entre el 0 i el 100
-
-        while (bucle) {
-
-            suma = suma + nota;
-            contador++;
-
-            // demana un nou valor
-
-            System.out.println("Introdueix una nota");
-
-            nota = Integer.parseInt(Entrada.readLine());
-            if (0 >= nota && nota >= 100) {
-            	   System.out.println("La suma de les notes vàlides és " + suma/contador);
-            	   bucle = false;
-
-        }
-
-
-        // mostrem el resultat
-
-        System.out.println("La suma de les notes vàlides és " + suma/contador);
-
-    }
-
-}
-}
-
+        	        System.out.println("La suma de les notes vàlides és " + divisio);
+        	        }
+        	       }
