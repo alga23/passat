@@ -15,27 +15,33 @@ public class EndevinaNombre {
 	 		
 	 		//programen tots els possibles 
 	 		//camins que l'usuari pot tomar
-	 		 if (nombre == 0) {
-	 			System.out.println("Com a mínim 1");
-	 			}
-	 		
-	 		else if (nombre < nombreAEndevinar) {
-	 			System.out.println("És més gran que " + nombre);
-	 			}
-	 		else if (nombre > 100) {
-	 			System.out.println("Com a màxim 100");
-	 			}
-	 		else if (nombre > nombreAEndevinar) {
-	 			System.out.println("És més petit que " + nombre);
-	 			}
+	 		 if (nombre < nombreAEndevinar) {
+	 		 	if (nombre >100) {
+	 		 		System.out.println("Com a mínim 1");
+	 		 		}
+	 		 	else {
+	 		 	System.out.println("És més petit que " + nombre);
+	 		 	}
+	 		 }
+
+	 		 else if (nombre > nombreAEndevinar) {
+	 		 	if (nombre > 100) {
+	 		 		System.out.println("Com a màxim 100");
+	 		 		}
+	 		 	else {
+	 		 	System.out.println("És més gran que " + nombre);
+	 		 	}
+	 		 }
+	 		 
 	 		
 	 	
 	 		
 	 		else if (nombre == nombreAEndevinar) {
 	 			System.out.println("Has encertat!");
 	 			}
-	 		}
+	 		
 	 	}
 	 }
+	}
 	 			
 	 	
