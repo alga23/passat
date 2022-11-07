@@ -28,8 +28,8 @@ public class NotaMitja {
             		
 
         	}
-        	if (0 >=nota && nota >= 100){
-        	        System.out.println("La suma de les notes vàlides és " + divisio);
+        	if (0 >=nota || nota >= 100){
+        	        System.out.println("La mitja de les notes vàlides és " + divisio);
         	        }
         	       }
         	      }
