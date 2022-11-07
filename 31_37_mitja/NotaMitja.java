@@ -13,7 +13,7 @@ public class NotaMitja {
 
         	int nota = Integer.parseInt(Entrada.readLine());
         	if (nota < 0) {
-        		System.out.println("Cap nota valida");
+        		System.out.println("Cap nota vàlida introduïda");
         		}
         		
         	
