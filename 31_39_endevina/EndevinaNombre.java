@@ -22,14 +22,15 @@ public class EndevinaNombre {
 	 		else if (nombre < nombreAEndevinar) {
 	 			System.out.println("És més gran que " + nombre);
 	 			}
+	 		else if (nombre > 100) {
+	 			System.out.println("Com a màxim 100");
+	 			}
 	 		else if (nombre > nombreAEndevinar) {
 	 			System.out.println("És més petit que " + nombre);
 	 			}
 	 		
 	 	
-	 		else if (nombre > 100) {
-	 			System.out.println("Com a màxim 100");
-	 			}
+	 		
 	 		else if (nombre == nombreAEndevinar) {
 	 			System.out.println("Has encertat!");
 	 			}
