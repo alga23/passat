@@ -12,6 +12,10 @@ public class NotaMitja {
 	 	System.out.println("Introdueix una nota");
 
         	int nota = Integer.parseInt(Entrada.readLine());
+        	if (nota < 0) {
+        		System.out.println("Cap nota valida");
+        		}
+        		
         	
         	while (0 <= nota && nota <= 100) {
 
@@ -24,6 +28,8 @@ public class NotaMitja {
             		
 
         	}
+        	if (0 >=nota && nota >= 100){
         	        System.out.println("La suma de les notes vàlides és " + divisio);
         	        }
         	       }
+        	      }
