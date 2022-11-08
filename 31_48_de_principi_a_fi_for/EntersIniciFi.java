@@ -13,7 +13,7 @@ public class EntersIniciFi {
 		System.out.println("Salt?");
 		int salt = Integer.parseInt(Entrada.readLine());
 		
-		for (int i = valorInicial; i < valorFinal; i = i + salt) {
+		for (int i = valorInicial; i <= valorFinal; i = i + salt) {
 			System.out.println(i);
 			}
 		}
