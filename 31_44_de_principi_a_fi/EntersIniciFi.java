@@ -20,7 +20,7 @@ public class EntersIniciFi {
 		System.out.println("Salt?");
 		int salt =Integer.parseInt(Entrada.readLine());
 		
-		while (valorInicial < valorFinal) {
+		while (valorInicial <= valorFinal) {
 			System.out.println(valorInicial);
 			valorInicial = valorInicial +salt;
 			}
