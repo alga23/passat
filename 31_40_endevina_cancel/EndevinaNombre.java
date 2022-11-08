@@ -12,14 +12,17 @@ public class EndevinaNombre {
 		while ( nombreAEndevinar != nombre ) {
 			System.out.println("Introdueix un valor");
 			entrada = Entrada.readLine();
-			 if (nombre == nombreAEndevinar) {
-	 			System.out.println("Has encertat!");
-	 			}
-			else if (entrada.equals("")){
+			
+			 if (entrada.equals("")){
 				System.out.println("Cancel·lat!");
 				entrada = "42";
 				nombre = Integer.parseInt(entrada);
-				}
+			
+			else if (nombre == nombreAEndevinar) {
+			 	nombre = Integer.parseInt(entrada);
+	 			System.out.println("Has encertat!");
+	 			}
+	 			
 				
 			
 			
