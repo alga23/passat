@@ -7,13 +7,9 @@ public class QuadratNombres {
 	public static void main (String[] args){
 		System.out.println("Valor final?");
 		int valorFinal = Integer.parseInt(Entrada.readLine());
-		if (valorFinal > 9 ) {
+		if (valorFinal > 9 && valorFinal < 1 ) {
 			System.out.println("Valor inadequat");
 			}
-		if (valorFinal < 1) {
-			System.out.println("Valor inadequat");
-			}
-		
 		else {
 			for (int linia=1; linia <= valorFinal; linia++) {
 
