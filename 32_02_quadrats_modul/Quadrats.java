@@ -7,14 +7,17 @@ public class Quadrats {
 	public static void main (String[] args) {
 		System.out.println("Quants?");
 		int nombre = Integer.parseInt(Entrada.readLine()); 
-		dibuixaQuadrats(nombre);
+		int contador = 0;
+                while(contador < nombre){
+			dibuixaQuadrats();
+			contador+=1;
 		}
+	}
 		
 		
 		
-		public static void dibuixaQuadrats(int quantitat) {
-		int cont = 0;
-		while(cont < quantitat){
+		public static void dibuixaQuadrats() {
+		
 	
 		for (int linia=1; linia <= 5; linia++) {
 
@@ -35,7 +38,7 @@ public class Quadrats {
 
         }
         System.out.println();
-        cont+= 1;
+       
        }
       }
-     }
+     
