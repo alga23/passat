@@ -9,27 +9,37 @@ public class LloroQuadrat {
 		while (bucle) {
 			System.out.println("El lloro espera paraula:");
 			String repeticio= Entrada.readLine();
-			if (!repeticio.isBlank()) {
-					System.out.println("El lloro repeteix: " + repeticio);					
-					}		
+			if (repeticio.equals("dibuixa rectangle")){
+				dibuixaRectangle();
+				}
+				
+			else if (repeticio.equals("dibuixa quadrat")){
+				dibuixaQuadrat();
+				}	
+			else if (!repeticio.isBlank()) {
+					System.out.println("El lloro repeteix: " + repeticio);	
+					
+			}				
+							
 			
-			else if (repeticio.equals("dibuixa rectangle"){
+			/*else if (repeticio.equals("dibuixa rectangle")){
 				dibuixaRectangle();
 				}
 			
-			else if (repeticio.equals("dibuixa quadrat"){
+			else if (repeticio.equals("dibuixa quadrat")){
 				dibuixaQuadrat();
-				}	
+				}*/	
 			else {
 				System.out.println("Adéu");
 				bucle = false;
 				}
 			}
 		}
-		}
+		
+		
 		public static void dibuixaRectangle(){
-			for (int i = 1; i<10; i++){
-				for (int j = 1; j<5; j++){
+			for (int i = 1; i<=10; i++){
+				for (int j = 1; j<=5; j++){
 					System.out.print(" X");
 					}
 				System.out.println("");
@@ -37,10 +47,11 @@ public class LloroQuadrat {
 	}
 	}
 	public static void dibuixaQuadrat(){
-			for (int i = 1; i<4; i++){
-				for (int j = 1; j<5; j++){
+			for (int i = 1; i<=5; i++){
+				for (int j = 1; j<=5; j++){
 					System.out.print(" X");
 					}
 				System.out.println("");
 				}
 			}
+		}
