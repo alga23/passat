@@ -1,51 +1,53 @@
 /*Prorama igual que l'anterior però aquesta
-/vegada utilitzarem un mòdul per optimitzar
-/el nostre programa
+/vegada utilitzarem dos moduls per optimitzar
+/el nostre programa. Un dels moduls serà cridat
+per l'altre, i cada un faran solament un des dos
+for
 */
 
 public class Quadrats {
-	public static void main (String[] args) {
+		public static void main (String[] args) {
 		System.out.println("Quants?");
 		int nombre = Integer.parseInt(Entrada.readLine()); 
-		dibuixaQuadrats();
+		int contador = 0;
+                while(contador < nombre){
+			dibuixaQuadrats();
+			contador+=1;
 		}
+	}
 		
 		
 		
 		public static void dibuixaQuadrats() {
-		int cont = 0;
-		while(cont < nombre){
+		
 	
 		for (int linia=1; linia <= 5; linia++) {
 			dibuixaLinia();
-			cont++;
+
 			}
+		System.out.println();
 		}
-	}
+		
 
             // dibuixa una línia
 
-           	 	
-           	 public static void dibuixaLinia() {
-           	 int cont = 0;
-		while(cont < nombre){
-           	 
-           	 	for (int columna=1; columna <= 5; columna++) {
-           	 		cont++;
-           	 		}
+           	 public static void dibuixaLinia(){
+           	 for (int columna=1; columna <= 5; columna++) {
+           	 	System.out.print(" X");
+           	 	}
 
                 // dibuixa un element de la línia
 
-                System.out.print(" X");
+                System.out.println();
 
             }
+            }
 
-            // dibuixa un salt de línia
 
-            
 
-        }
-       
-       }
+
+           
+
+        
       
      
