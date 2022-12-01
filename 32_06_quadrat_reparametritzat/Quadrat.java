@@ -13,7 +13,7 @@ public class Quadrat {
 	public static void dibuixaQuadrat(int nombre, String caracter){
 		for (int i = 1; i <= nombre; i++){
 			for (int j = 1; j <=nombre; j++){
-				System.out.print(caracter);
+				System.out.print(" " +caracter);
 				}
 			System.out.println("");
 			}
