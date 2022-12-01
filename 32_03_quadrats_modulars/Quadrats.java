@@ -19,8 +19,11 @@ public class Quadrats {
 		
 		
 		public static void dibuixaQuadrats() {
+			dibuixaQuadrat();
+			}
 		
 	
+		public static void dibuixaQuadrat(){
 		for (int linia=1; linia <= 5; linia++) {
 			dibuixaLinia();
 
