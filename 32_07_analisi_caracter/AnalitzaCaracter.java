@@ -8,19 +8,31 @@ public class AnalitzaCaracter{
 		String cadena = Entrada.readLine();
 		System.out.println("Posició?");
 		int nombre = Integer.parseInt(Entrada.readLine());
-		
-		char caracterEscollit = cadena.charAt(nombre);
-		if (nombre < 0 || nombre > cadena.length()){
+		if (nombre < 0) {
 			System.out.println("Fora de rang");
+			
 			}
+			
 		
-		analitzaCaracter(caracterEscollit);
+		if (nombre > 0){
+		char caracterEscollit = cadena.charAt(nombre);
+		
+		
+		analitzaCaracter(caracterEscollit, cadena);
+		}
+		
 		
 		}
-	public static void analitzaCaracter(char caracter) {
+	public static void analitzaCaracter(char caracter, String cadena) {
 		
 		 if(Character.isDigit(caracter)){
 			System.out.println("'"+caracter+ "' és un nombre");
+			int nombreCaracter = caracter;
+			if (nombreCaracter < 0 || nombreCaracter > cadena.length()){
+				System.out.println("Fora de rang");
+			}
+			
+			
 			}
 		else if(Character.isLetter(caracter)){
 			System.out.println("'"+caracter+ "' és una lletra");
