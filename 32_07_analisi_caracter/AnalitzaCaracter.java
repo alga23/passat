@@ -27,10 +27,7 @@ public class AnalitzaCaracter{
 		
 		 if(Character.isDigit(caracter)){
 			System.out.println("'"+caracter+ "' és un nombre");
-			int nombreCaracter = caracter;
-			if (nombreCaracter < 0 || nombreCaracter > cadena.length()){
-				System.out.println("Fora de rang");
-			}
+			
 			
 			
 			}
