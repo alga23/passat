@@ -9,16 +9,18 @@ public class AnalitzaCaracter{
 		System.out.println("Posició?");
 		int nombre = Integer.parseInt(Entrada.readLine());
 		if (nombre < 0) {
-			System.out.println("Fora de rang");
-			
+			char caracterEscollit = cadena.charAt(nombre);
+		
+		
+			analitzaCaracter(caracterEscollit, cadena);	
 			}
 			
 		
 		if (nombre > 0){
-		char caracterEscollit = cadena.charAt(nombre);
+			char caracterEscollit = cadena.charAt(nombre);
 		
 		
-		analitzaCaracter(caracterEscollit, cadena);
+			analitzaCaracter(caracterEscollit, cadena);
 		}
 		
 		
