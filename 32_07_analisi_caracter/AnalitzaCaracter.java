@@ -10,25 +10,26 @@ public class AnalitzaCaracter{
 		int nombre = Integer.parseInt(Entrada.readLine());
 		if (nombre < 0) {
 			char caracterEscollit = cadena.charAt(nombre);
-		
-		
-			analitzaCaracter(caracterEscollit, cadena);	
+			
 			}
+			
 			
 		
 		if (nombre > 0){
-			char caracterEscollit = cadena.charAt(nombre);
+		char caracterEscollit = cadena.charAt(nombre);
 		
 		
-			analitzaCaracter(caracterEscollit, cadena);
+		analitzaCaracter(caracterEscollit, cadena);
 		}
 		
 		
+		
 		}
-	public static void analitzaCaracter(char caracter, String cadena) {
+	public static void analitzaCaracter(char caracter) {
 		
 		 if(Character.isDigit(caracter)){
 			System.out.println("'"+caracter+ "' és un nombre");
+			
 			
 			
 			
