@@ -25,7 +25,7 @@ public class AnalitzaCaracter{
 		
 		
 		}
-	public static void analitzaCaracter(char caracter) {
+	public static void analitzaCaracter(char caracter, String cadena) {
 		
 		 if(Character.isDigit(caracter)){
 			System.out.println("'"+caracter+ "' és un nombre");
