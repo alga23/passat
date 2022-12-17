@@ -25,8 +25,6 @@ public class AnalitzaCaracter{
 		}
 		
 			
-			
-		
 		if (nombre >= 0){
 		
 			
@@ -44,11 +42,7 @@ public class AnalitzaCaracter{
 		
 		
 		
-			
-		
-		
-		
-		}
+}
 		
 	public static void analitzaCaracter(char caracter) {
 		
