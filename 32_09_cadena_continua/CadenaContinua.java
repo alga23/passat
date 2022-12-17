@@ -7,7 +7,7 @@ public class CadenaContinua{
 		System.out.println("Text?");
 		String text = Entrada.readLine();
 		if (text.equals("")){
-			System.out.println("Error");
+			System.out.println("error");
 			}
 		else{
 		System.out.println("Nombre?");
