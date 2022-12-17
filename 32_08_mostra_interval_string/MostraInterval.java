@@ -20,10 +20,12 @@ public class MostraInterval {
 		public static void mostraInterval(String text, int nombreInicial, 							int nombreFinal) {
 		
 		if (nombreInicial > nombreFinal) {
-			for(int i = nombreFinal; i >= nombreInicial; i--){
+			for(int i = nombreInicial; i >= nombreFinal; i--){
 				char lletra = text.charAt(i);
 				System.out.println(lletra);
 				}
+				if (nombreInicial > text.length()){
+				
 			}
 				
 		
@@ -33,13 +35,14 @@ public class MostraInterval {
 				System.out.println(lletra);
 			}
 		}
-		/*else if (nombreFinal > text.length()){
+		else if (nombreFinal > text.length()){
 			for (int i = nombreInicial; i <= text.length();i++){
 			char lletra = text.charAt(i);
 			System.out.println(lletra);
-			}*/
+			}
 		}
 	}
+}
 				
 
 		
