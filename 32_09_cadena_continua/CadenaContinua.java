@@ -1,5 +1,5 @@
 /*Programa que rebrà una cadena i un nombre
-/i repetira els caràcters de la caena ( en cas de que
+/i repetira els caràcters de la cadena ( en cas de que
 /acabi, torna a començar) fins a arribar al nombre
 */
 public class CadenaContinua{
@@ -19,9 +19,20 @@ public class CadenaContinua{
 			}
 		}
 	}
-	public void static mostraCadenaContinua(String text ,int nombre){
-		for (int i = 0; i < nombre; i++){
-			char caracter = text.charAt(i);
+	public static void mostraCadenaContinua(String text ,int nombre){
+		if(text.length() >= 1) {
+        		int paraules = nombre / text.length();
+        		for(int palabra = 1; palabra <= paraules; palabra++) {
+           			 System.out.print(text);
+        }
+        int letras = nombre % text.length();
+        for(int posicio = 0; posicio <= letras -1; posicio++) {
+           System.out.print(text.charAt(posicio));
+        }
+			
+			}
+		}
+	}
 			
 		
 	
