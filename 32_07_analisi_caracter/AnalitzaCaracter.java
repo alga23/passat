@@ -22,6 +22,7 @@ public class AnalitzaCaracter{
 					analitzaCaracter(caracterEscollit);
 			
 			}
+		}
 		
 			
 			
@@ -48,7 +49,7 @@ public class AnalitzaCaracter{
 		
 		
 		}
-		}
+		
 	public static void analitzaCaracter(char caracter) {
 		
 		 if(Character.isDigit(caracter)){
