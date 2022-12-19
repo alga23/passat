@@ -20,6 +20,9 @@ public class VocalsMajuscules {
 				}
 			else {
 				nouText.append(lletra);
+				if (Character.isLowerCase(lletra)){
+					nouText.append(Character.toLowerCase(lletra));
+					}
 				}
 			}
 			System.out.print(nouText);	
