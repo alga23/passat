@@ -18,11 +18,12 @@ public class VocalsMajuscules {
 			if (lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u' ){
 				nouText.append(Character.toUpperCase(lletra));
 				}
-			else {
-				nouText.append(lletra);
-				if (Character.isLowerCase(lletra)){
+			else if (Character.isLowerCase(lletra)){
 					nouText.append(Character.toLowerCase(lletra));
 					}
+			else {
+				nouText.append(lletra);
+				
 				}
 			}
 			System.out.print(nouText);	
