@@ -15,6 +15,9 @@ public class NomesLletres{
 			if (Character.isLetter(lletra)){
 				System.out.print(lletra + ", ");
 				}
+			if (lletra == text.length()-1) {
+				System.out.print(lletra);
+				
 			}								      
 				for (int j = text.length()-1; j < text.length();j++){  
 					char lletraFinal = text.charAt(j);
