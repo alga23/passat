@@ -12,7 +12,7 @@ public class VocalsMajuscules {
 		}
 		
 	public static void majusculitzaVocals (String text) {
-		for (int i = 0; i <= text.length(); i++) {
+		for (int i = 0; i < text.length(); i++) {
 			char lletra = text.charAt(i);
 			String nouText;
 			if (lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u' ){
