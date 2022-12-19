@@ -18,7 +18,7 @@ public class VocalsMajuscules {
 			if (lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u' ){
 				nouText.append(Character.toUpperCase(lletra));
 				}
-			else if (Character.isLowerCase(lletra)){
+			if (Character.isLowerCase(lletra)){
 					nouText.append(Character.toLowerCase(lletra));
 					}
 			else {
