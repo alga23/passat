@@ -12,13 +12,18 @@ public class VocalsMajuscules {
 		}
 		
 	public static void majusculitzaVocals (String text) {
+		StringBuilder nouText = new StringBuilder();
 		for (int i = 0; i < text.length(); i++) {
 			char lletra = text.charAt(i);
-			String nouText;
 			if (lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u' ){
-				lletra = Character.toUpperCase(lletra);
+				nouText.append(Character.toUpperCase(lletra));
 				}
-			System.out.print(lletra);
+			else {
+				nouText.append(lletra);
+				}
 			}
+			System.out.print(nouText);	
 		}
-	}
+			}
+		
+	
