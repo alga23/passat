@@ -15,12 +15,13 @@ public class VocalsMajuscules {
 		StringBuilder nouText = new StringBuilder();
 		for (int i = 0; i < text.length(); i++) {
 			char lletra = text.charAt(i);
-			if (lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u' ){
-				nouText.append(Character.toUpperCase(lletra));
-				}
+			
 			if (Character.isLowerCase(lletra)){
 					nouText.append(Character.toLowerCase(lletra));
 					}
+			else if (lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u' ){
+				nouText.append(Character.toUpperCase(lletra));
+				}
 			else {
 				nouText.append(lletra);
 				
