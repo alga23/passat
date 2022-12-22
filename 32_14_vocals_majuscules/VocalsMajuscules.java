@@ -16,19 +16,24 @@ public class VocalsMajuscules {
 		for (int i = 0; i < text.length(); i++) {
 			char lletra = text.charAt(i);
 			
-			if (Character.isLowerCase(lletra)){
-					nouText.append(Character.toLowerCase(lletra));
-					}
-			else if (lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u' ){
-				nouText.append(Character.toUpperCase(lletra));
-				}
+			
+			if (lletra >= 'A' && lletra <= 'Z' && lletra != 'A' && lletra != 'E' && lletra != 'I' && lletra != 'O' && lletra!= 'U'){
+			
+				nouText.append(Character.toLowerCase(lletra));
+				
+			}else if (lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u') {
+				 nouText.append(Character.toUpperCase(lletra));
+				 }
 			else {
 				nouText.append(lletra);
-				
 				}
 			}
-			System.out.print(nouText);	
-		}
+			String textFinal = nouText.toString();
+			System.out.println(textFinal);
 			}
+		
+		}	
+		
+	
 		
 	
