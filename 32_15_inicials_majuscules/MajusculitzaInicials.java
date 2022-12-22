@@ -15,16 +15,16 @@ public class MajusculitzaInicials{
 
 		for (int i = 0; i <text.length(); i++) {
 			char lletra = text.charAt(i);
-			if ( Character.isWhitespace(lletra)){
-				int vocalNombre= text.indexOf(lletra) -1; 
-				char vocalMajuscula = text.charAt(vocalNombre);	nouText.append(Character.ToUpperCase(vocalMajuscula));
+			char lletraSeguent = text.charAt(i +1);
+			if (Character.isWhitespace(lletraSeguent)){
+				nouText.append(Character.toUpperCase(lletra));
 				}
 				else {
-				nouText.append(i);
+					nouText.append(lletra);
+					}
+				}
+				String textFinal = nouText.toString();
+				System.out.println(textFinal);
 				}
 			}
-			String textFinal = nouText.ToString();
-			System.out.println(textFinal);
-		}
-	}
 				
