@@ -15,29 +15,31 @@ public class MatriculaValida {
 		}
 		
 	public static void esLletraValidaPerMatriculaItaliana(String matri){
+		boolean esValida = true;
 		for (int i = 0; i < matri.length(); i++) {
-			boolean esaMatri;
-			
-			if (Character.isLetter(matri.charAt(0))){
-				if (Character.isLetter(matri.charAt(1))){
-				
-					if (Character.isDigit(matri.charAt(2))){
-						if (Character.isDigit(matri.charAt(3))){
-							if (Character.isDigit(matri.charAt(4))){
-							
-								if (Character.isLetter(matri.charAt(5))){
-									if (Character.isLetter(matri.charAt(6))){
-										System.out.println("És una matrícula italiana vàlida");
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-				else {
-					System.out.println("No és una matrícula italiana vàlida");
-					}
+			if (i == 0 || i == 1) {
+			    if (!Character.isLetter(matri.charAt(i))) {
+				esValida = false;
+				break;
+            }
+			} else if (i >= 2 && i <= 4) {
+			    if (!Character.isDigit(matri.charAt(i))) {
+				esValida = false;
+				break;
+            }
+			} else if (i >= 5 && i <= 6) {
+			    if (!Character.isLetter(matri.charAt(i))) {
+				esValida = false;
+				break;
+			    }
+        }
+    }
+    if (!esValida) {
+        System.out.println("La matricula no es valida");
+        
+    }else {
+    	System.out.println("És una matrícula italiana vàlida");
+    	}
 				}
 			}
-		}
+		
