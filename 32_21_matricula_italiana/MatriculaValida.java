@@ -9,10 +9,16 @@ public class MatriculaValida {
 		
 		String matricula = Entrada.readLine();
 		
+		if (matricula.length() == 6) {
+		
 		esLletraValidaPerMatriculaItaliana(matricula);
+		}
+		else {
+			System.out.println("La matricula no es valida");
 		
 		
 		}
+	}
 		
 	public static void esLletraValidaPerMatriculaItaliana(String matri){
 		boolean esValida = true;
@@ -34,12 +40,11 @@ public class MatriculaValida {
 			    }
         }
     }
-    if (esValida) {
-        System.out.println("És una matrícula italiana vàlida");
-
+    if (!esValida) {
+        System.out.println("La matricula no es valida");
         
     }else {
-	 System.out.println("La matricula no es valida");
+    	System.out.println("És una matrícula italiana vàlida");
     	}
 				}
 			}
