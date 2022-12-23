@@ -16,6 +16,7 @@ public class MatriculaValida {
 		
 	public static void esLletraValidaPerMatriculaItaliana(String matri){
 		for (int i = 0; i < matri.length(); i++) {
+			boolean esaMatri;
 			
 			if (Character.isLetter(matri.charAt(0))){
 				if (Character.isLetter(matri.charAt(1))){
