@@ -11,11 +11,15 @@ public class TextReves {
 		
 		}
 	public static void mostraReves(String text){
-		String nouText = "";
+    		StringBuilder nouText = new StringBuilder();
+
 		for (int i = text.length() -1; i >= 0; i--) {
-			char lletra = text.charAt(i);
-			nouText += lletra;
+			if( i < text.length() - 1) {
+			nouText.append(", " + text.charAt(i));
 			}
-			System.out.println(nouText);
+			System.out.println(nouText.toString());
+			}
+
 		}
 	}
+
