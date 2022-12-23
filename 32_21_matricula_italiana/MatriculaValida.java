@@ -34,11 +34,12 @@ public class MatriculaValida {
 			    }
         }
     }
-    if (!esValida) {
-        System.out.println("La matricula no es valida");
+    if (esValida) {
+        System.out.println("És una matrícula italiana vàlida");
+
         
     }else {
-    	System.out.println("És una matrícula italiana vàlida");
+	 System.out.println("La matricula no es valida");
     	}
 				}
 			}
