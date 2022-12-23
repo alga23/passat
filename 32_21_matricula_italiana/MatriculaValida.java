@@ -41,7 +41,7 @@ public class MatriculaValida {
         }
     }
     if (!esValida) {
-        System.out.println("No és una matricula italiana vàlida");
+        System.out.println("No és una matrícula italiana vàlida");
         
     }else {
     	System.out.println("És una matrícula italiana vàlida");
