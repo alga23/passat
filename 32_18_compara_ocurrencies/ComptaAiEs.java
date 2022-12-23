@@ -3,7 +3,27 @@ public class ComptaAiEs {
     public static void main(String[] args) {
         System.out.println("Introdueix un text");
         String entrada = Entrada.readLine();
+        comptaLletra(entrada, 'a');
+	comptaLletra(entrada, 'e');
         comparaOcurrencies(entrada, 'a', 'e');
+    }
+    
+    public static void comptaLletra(String text, char lletra) {
+
+        int comptador = 0;
+
+        for (int i=0; i < text.length(); i++) {
+
+            if (text.charAt(i) == lletra) {
+
+                comptador += 1;
+
+            }
+
+        }
+
+        System.out.println("Nombre de '" + lletra + "'s: " + comptador);
+
     }
     
       
