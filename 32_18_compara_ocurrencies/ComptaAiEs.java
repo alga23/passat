@@ -37,8 +37,6 @@ public class ComptaAiEs {
                 comptadorE += 1;
             }
         }
-        System.out.println("Nombre de 'a's: " + comptadorA);
-        System.out.println("Nombre de 'e's: " + comptadorE);
         if (comptadorA > comptadorE) {
             System.out.println("Hi ha més 'a's que 'e's");
         } else if (comptadorA < comptadorE) {
