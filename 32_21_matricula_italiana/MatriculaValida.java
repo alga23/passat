@@ -14,7 +14,7 @@ public class MatriculaValida {
 		esLletraValidaPerMatriculaItaliana(matricula);
 		}
 		else {
-			System.out.println("No és una matricula italiana valida");
+			System.out.println("No és una matrícula italiana vàlida");
 		
 		
 		}
