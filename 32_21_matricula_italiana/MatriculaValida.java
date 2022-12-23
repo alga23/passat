@@ -9,11 +9,15 @@ public class MatriculaValida {
 		
 		String matricula = Entrada.readLine();
 		
-
+		if (matricula.length() == 7) {
 		
 		esLletraValidaPerMatriculaItaliana(matricula);
+		}
+		else {
+			System.out.println("La matricula no es valida");
 		
 		
+		}
 	}
 		
 	public static void esLletraValidaPerMatriculaItaliana(String matri){
