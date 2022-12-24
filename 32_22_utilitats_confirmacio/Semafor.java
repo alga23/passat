@@ -31,7 +31,7 @@ public class Semafor {
 			System.out.println("passa");
 			}
 		else {
-			System.out.println("Ves a l'oculista");
+			System.out.println("ves a l'oculista");
 		}
 	}
 }
