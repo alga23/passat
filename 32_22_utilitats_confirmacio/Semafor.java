@@ -30,5 +30,8 @@ public class Semafor {
 		else if(color.equals("verd")){
 			System.out.println("passa");
 			}
+		else {
+			System.out.println("Ves a l'oculista");
 		}
 	}
+}
