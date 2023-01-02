@@ -7,15 +7,21 @@ public class NotaMesAlta {
 	public static void main (String[] args) {
 		System.out.println("Introdueix les notes (-1 per finalitzar)");
 		int nombre1 = Integer.parseInt(Entrada.readLine());
-		int nombre2 = Integer.parseInt(Entrada.readLine());
+		if(nombre1 == -1){
+			System.out.println("Com a mínim calen dues notes");
+			}
+		else {
+		
+			int nombre2 = Integer.parseInt(Entrada.readLine());
 		int mesAlta = 0;
-		if(nombre1 == -1 || nombre2 == -1){
+		if( nombre2 == -1){
 			System.out.println("Com a mínim calen dues notes");
 			}
 		else {
 		
 			notaMesAlta(nombre1, nombre2, mesAlta);
 		}
+	}
 		
 	}
 
