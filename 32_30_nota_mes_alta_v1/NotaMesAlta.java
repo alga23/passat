@@ -9,13 +9,14 @@ public class NotaMesAlta {
 		int nombre1 = Integer.parseInt(Entrada.readLine());
 		int nombre2 = Integer.parseInt(Entrada.readLine());
 		int mesAlta = 0;
-		if ((nombre1 > 0 && nombre1 < 10) || (nombre2 > 0 && nombre2 < 10)){
+		if(nombre1 == -1 || nombre2 == -1){
+			System.out.println("Com a mínim calen dues notes");
+			}
+		else {
 		
 			notaMesAlta(nombre1, nombre2, mesAlta);
 		}
-		else {
-			System.out.println("Com a mínim calen dues notes");
-			}
+		
 	}
 
 	public static void notaMesAlta(int nombre1, int nombre2, int mesAlta) {
