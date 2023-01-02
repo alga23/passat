@@ -13,6 +13,9 @@ public class NotaMesAlta {
 		
 			notaMesAlta(nombre1, nombre2, mesAlta);
 		}
+		else {
+			System.out.println("Com a mínim calen dues notes");
+			}
 	}
 
 	public static void notaMesAlta(int nombre1, int nombre2, int mesAlta) {
