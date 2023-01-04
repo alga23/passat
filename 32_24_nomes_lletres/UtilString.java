@@ -38,20 +38,23 @@ public class UtilString {
 			
 	public static String lletresSeparades (String paraula) {
 		StringBuilder paraulaAmbComa = new StringBuilder();
-		System.out.print(paraula.charAt(0) + ", ");
-		for (int i = 1; i < paraula.length()-1; i++){
-			char lletraAmbComa = paraula.charAt(i);
-			if (Character.isLetter(lletraAmbComa) == true) {
-			
-			paraulaAmbComa.append(lletraAmbComa + ",");
-			}
-			paraula = paraulaAmbComa.toString();
-			
+		 for (int i = 0; i < paraula.length(); i++) {
+   		 	char lletra = paraula.charAt(i);
 
-			}
-			return paraula;
-		}
-	}
+
+    		if (Character.isLetter(lletra)) {
+      			paraulaAmbComa.append(lletra);
+
+      			if (i < paraula.length() - 1) {
+        paraulaAmbComa.append(", ");
+      }
+    }
+  }
+
+  return paraulaAmbComa.toString();
+  }
+ }
+ 
 		
 
 
