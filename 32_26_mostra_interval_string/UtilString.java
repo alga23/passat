@@ -64,7 +64,7 @@ public class UtilString {
 		
 		else if (valorFinal < valorInicial) {
 		
-			for (int i = valorFinal; i > text.charAt(valorInicial); i--) {
+			for (int i = valorFinal; i >= valorInicial; i--) {
 				char lletra = text.charAt(i);
 		
 				nouText.append(lletra);
