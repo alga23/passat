@@ -45,7 +45,7 @@ public class UtilString {
     		if (Character.isLetter(lletra)) {
       			paraulaAmbComa.append(lletra);
 
-      			if (i < paraula.length() ) {
+      			if (i < paraula.length() -2 ) {
         paraulaAmbComa.append(", ");
       }
     }
