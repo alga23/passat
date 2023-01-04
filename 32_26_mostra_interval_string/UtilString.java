@@ -72,7 +72,7 @@ public class UtilString {
 			  	 text = nouText.toString();
 			  	 return text;
 			  }
-			  /*else if (valorFinal > text.length()){
+			  else if (valorFinal > text.length()){
 			  
 			  	for (int i = valorFinal; i < text.length(); i++) {
 					char lletra = text.charAt(i);
