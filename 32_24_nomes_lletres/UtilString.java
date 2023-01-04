@@ -39,7 +39,7 @@ public class UtilString {
 	public static String lletresSeparades (String paraula) {
 		StringBuilder paraulaAmbComa = new StringBuilder();
 		for (int i = 1; i < paraula.length()-2; i++){
-			char lletraAmbComa = paraula.charAt(0);
+			char lletraAmbComa = paraula.charAt(i);
 			
 			paraulaAmbComa.append(lletraAmbComa + ",");
 			}
