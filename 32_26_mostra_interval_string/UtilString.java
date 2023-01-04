@@ -52,15 +52,10 @@ public class UtilString {
 	public static String intervalString (String text, int valorInicial, int valorFinal) {
 	StringBuilder nouText = new StringBuilder();
 	if (valorFinal > valorInicial){
-	for (int i = valorInicial; i <= valorFinal; i++) {
-		char lletra = text.charAt(i);
-		
-		nouText.append(lletra);
-		
+		text.substring(valorInicial, valorFinal);
+		return text;
 		}
-
-		 return nouText.toString();
-	}
+	
 		
 	 if (valorFinal < valorInicial) {
 		
