@@ -47,7 +47,7 @@ public class UtilString {
 			}
 			paraula = paraulaAmbComa.toString();
 			
-			return paraula;
+
 			}
 			return paraula;
 		}
