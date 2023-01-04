@@ -55,31 +55,10 @@ public class UtilString {
 		text.substring(valorInicial, valorFinal);
 		return text;
 		}
-	
-		
-	 if (valorFinal < valorInicial) {
-		
-			for (int i = valorFinal; i >= valorInicial; i--) {
-				char lletra = text.charAt(i);
-		
-				nouText.append(lletra);
-			  	}
+		return text;
+		}
+	}
 
-			  	 return nouText.toString();
-			  }
-			  else if (valorFinal > text.length()){
-			  
-			  	for (int i = valorFinal; i < text.length(); i++) {
-					char lletra = text.charAt(i);
-				
-					nouText.append(lletra);
-			  	}
-
-			  	return nouText.toString();
-			  }
-			  return text;
-			 }
-			}
 			
 	
 		
