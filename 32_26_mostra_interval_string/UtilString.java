@@ -58,8 +58,8 @@ public class UtilString {
 		nouText.append(lletra);
 		
 		}
-		 text = nouText.toString();
-		 return text;
+
+		 return nouText.toString();
 	}
 		
 		else if (valorFinal > valorInicial) {
@@ -69,8 +69,8 @@ public class UtilString {
 		
 				nouText.append(lletra);
 			  	}
-			  	 text = nouText.toString();
-			  	 return text;
+
+			  	 return nouText.toString();
 			  }
 			  else if (valorFinal > text.length()){
 			  
@@ -79,8 +79,8 @@ public class UtilString {
 				
 					nouText.append(lletra);
 			  	}
-			  	 text = nouText.toString();
-			  	return text;
+
+			  	return nouText.toString();
 			  }
 			return text;
 			 }
