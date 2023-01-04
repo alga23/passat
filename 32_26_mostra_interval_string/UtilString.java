@@ -62,7 +62,7 @@ public class UtilString {
 		 return nouText.toString();
 	}
 		
-		else if (valorFinal > valorInicial) {
+		else if (valorFinal < valorInicial) {
 		
 			for (int i = valorFinal; i > text.charAt(valorInicial); i--) {
 				char lletra = text.charAt(i);
