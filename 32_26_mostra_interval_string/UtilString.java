@@ -82,7 +82,7 @@ public class UtilString {
 
 			  	return nouText.toString();
 			  }
-			return text;
+			  return "tezt";
 			 }
 			}
 			
