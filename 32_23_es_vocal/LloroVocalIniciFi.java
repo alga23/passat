@@ -29,7 +29,7 @@ public class LloroVocalIniciFi {
 			}
 		}
 		else if (UtilString.esVocal(paraula) == true) {
-			System.out.println("El loro diu: " + paraula);
+			System.out.println("El lloro diu: " + paraula);
 			System.out.println("El lloro demana paraula amb vocal a l'inici o/i final");
 			paraula = Entrada.readLine();
 			lloro(paraula);
