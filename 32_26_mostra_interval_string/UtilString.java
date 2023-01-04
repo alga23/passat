@@ -52,7 +52,7 @@ public class UtilString {
 	public static String intervalString (String text, int valorInicial, int valorFinal) {
 	StringBuilder nouText = new StringBuilder();
 	if (valorFinal > valorInicial){
-	for (int i = valorInicial; i < text.length(); i++) {
+	for (int i = valorInicial; i < valorFinal; i++) {
 		char lletra = text.charAt(i);
 		
 		nouText.append(lletra);
@@ -82,7 +82,7 @@ public class UtilString {
 
 			  	return nouText.toString();
 			  }
-			  return "tezt";
+			  return text;
 			 }
 			}
 			
