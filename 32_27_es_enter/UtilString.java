@@ -72,7 +72,7 @@ public class UtilString {
 			  	 text = nouText.toString();
 			  	 return text;
 			  }
-			  /*else if (valorFinal > text.length()){
+			  else if (valorFinal > text.length()){
 			  
 			  	for (int i = valorFinal; i < text.length(); i++) {
 					char lletra = text.charAt(i);
@@ -84,7 +84,61 @@ public class UtilString {
 			  }
 			return text;
 			 }
+			 
+		public static boolean esEnter(String text) {
+			 if (text.charAt(0) == '+' || text.charAt(0) =='-'){
+			 	for (int i = 1; i < text.length(); i++) {
+    					char c = text.charAt(i);
+
+   				 	if (!Character.isDigit(c)) {
+      					return false;
+      					}
+      				}
+      			}
+      			if (text.startsWith("")) {
+      				String nouText = text.trim();
+      				if (nouText.charAt(0) == '+' || nouText.charAt(0) =='-'){
+			 	for (int i = 1; i < nouText.length(); i++) {
+    					char c = nouText.charAt(i);
+
+   				 	if (!Character.isDigit(c)) {
+      					return false;
+      					}
+      				}
+      			}
+      			else {
+      				for (int i = 0; i < nouText.length(); i++) {
+    				char c = nouText.charAt(i);
+
+   				 if (!Character.isDigit(c)) {
+      					return false;
+      					}
+      				}
+      			}
+      		}
+      				
+      				else {
+
+  			for (int i = 0; i < text.length(); i++) {
+    				char c = text.charAt(i);
+
+   				 if (!Character.isDigit(c)) {
+      					return false;
+      					}
+      				}
+      				
+
+      					
+      					
+    }
+  
+
+
+ 			 return true;
+				}
 			}
+			
+		
 			
 	
 		
