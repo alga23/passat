@@ -41,16 +41,18 @@ public class MostraInterval {
 			}
 				
 			else{
-			for (int i = nombreInicial; i <= nombreFinal; i++){
+			for (int i = 0; i < text.length() -1; i++){
 				char lletra = text.charAt(i);
 				System.out.println(lletra);
-			}
+				}			
+				}
+				
 
 		}
 		
 		}
 	}
-}
+
 
 
 				
