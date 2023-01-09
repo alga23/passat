@@ -30,7 +30,7 @@ public class MostraInterval {
 				}
 				
 			if (nInici < nFinal) {
-				for (int i = nInici; i < nFinal; i++){
+				for (int i = nInici; i <= nFinal; i++){
 					char lletra = text.charAt(i);
 					System.out.println(lletra);
 					}
