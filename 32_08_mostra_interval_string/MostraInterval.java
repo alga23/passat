@@ -12,9 +12,7 @@ public class MostraInterval {
 		System.out.println("final?");
 		int nombreFinal = Integer.parseInt(Entrada.readLine());
 		
-		if (nombreInicial > 0 && nombreFinal > 0) {
 			mostraInterval(text, nombreInicial, nombreFinal);
-			}
 		}
 		
 		public static void mostraInterval(String text, int nombreInicial, 							int nombreFinal) {
@@ -35,6 +33,13 @@ public class MostraInterval {
 				char lletra = text.charAt(i);
 				System.out.println(lletra);
 				}
+			else if (nombreInicial < nombreFinal && nombreInicial < 0){
+				for (int i = 0; i < text.length(); i++){
+				char lletra = text.charAt(i);
+				System.out.println(lletra);
+				}
+			}
+				
 			else{
 			for (int i = nombreInicial; i <= nombreFinal; i++){
 				char lletra = text.charAt(i);
