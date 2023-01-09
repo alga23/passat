@@ -24,25 +24,30 @@ public class MostraInterval {
 				char lletra = text.charAt(i);
 				System.out.println(lletra);
 				}
-				if (nombreInicial > text.length()){
+
 				
 			}
 				
 		
 		else if (nombreInicial < nombreFinal){
+		if (nombreFinal > text.length())
+			for (int i = nombreInicial; i < text.length(); i++){
+				char lletra = text.charAt(i);
+				System.out.println(lletra);
+				}
+			else{
 			for (int i = nombreInicial; i <= nombreFinal; i++){
 				char lletra = text.charAt(i);
 				System.out.println(lletra);
 			}
+
 		}
-		else if (nombreFinal > text.length()){
-			for (int i = nombreInicial; i <= text.length();i++){
-			char lletra = text.charAt(i);
-			System.out.println(lletra);
-			}
+		
 		}
 	}
 }
+
+
 				
 
 		
