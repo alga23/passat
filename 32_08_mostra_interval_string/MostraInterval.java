@@ -12,42 +12,46 @@ public class MostraInterval {
 		System.out.println("final?");
 		int nFinal = Integer.parseInt(Entrada.readLine());
 		
-			mostraInterval(text, nInici, nFinal);
+		mostraInterval(text, nInici, nFinal);
 		}
 		
-		public static void mostraInterval(String text, int nInici, 							int nFinal) {
-			if (nInici < 0) {
-				nInici = 0;
+		public static void mostraInterval(String text, int nInici, int nFinal){
+		if (nInici > nFinal) {
+			for(int i = nInici; i >= nFinal; i--){
+				char lletra = text.charAt(i);
+				System.out.println(lletra);
 				}
-			if (nFinal < 0) {
-				nFinal = 0;
-				}
-			if (nInici > text.length()) {
-				nInici = 0;
-				}
-			if (nFinal > text.length()){
-				nFinal = 0;
-				}
+				if (nInici > text.length()){
 				
-			if (nInici < nFinal) {
-				for (int i = nInici; i <= nFinal; i++){
-					char lletra = text.charAt(i);
-					System.out.println(lletra);
-					}
-			if (nFinal > nInici) {
-				for (int i = nFinal; i > nInici; i--){
-					char lletra = text.charAt(i);
-					System.out.println(lletra);
-					}
+			}
+		}
+				
+		
+		else if (nInici < nFinal){
+			for (int i = nInici; i <= nFinal; i++){
+				char lletra = text.charAt(i);
+				System.out.println(lletra);
+			}
+		}
+		else if (nFinal > text.length()){
+			for (int i = nInici; i <= text.length();i++){
+			char lletra = text.charAt(i);
+			System.out.println(lletra);
+			}
+		}
+	}
+}
+    
+
 				 
 				
 		
-		}
 		
-		}
-	}
+		
+		
 	
-}
+	
+
 
 
 
