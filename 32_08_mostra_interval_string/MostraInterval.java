@@ -34,7 +34,7 @@ public class MostraInterval {
 				System.out.println(lletra);
 				}
 			else if (nombreInicial < nombreFinal && nombreInicial < 0){
-				for (int i = 0; i < text.length(); i++){
+				for (int i = 0; i < text.length() -1; i++){
 				char lletra = text.charAt(i);
 				System.out.println(lletra);
 				}
