@@ -94,7 +94,7 @@ public class UtilString {
       					return false;
       					}
       				}
-      			}/*
+      			}
       			if (text.startsWith("")) {
       				String nouText = text.trim();
       				if (nouText.charAt(0) == '+' || nouText.charAt(0) =='-'){
@@ -117,7 +117,6 @@ public class UtilString {
       			}
       		}
       		return false;
-      		*/
       		
       				
       				else {
