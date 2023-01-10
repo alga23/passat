@@ -11,36 +11,21 @@ public class MostraInterval {
 		int nInici = Integer.parseInt(Entrada.readLine());
 		System.out.println("final?");
 		int nFinal = Integer.parseInt(Entrada.readLine());
+	
 		
 		mostraInterval(text, nInici, nFinal);
+		
 		}
 		
 		public static void mostraInterval(String text, int nInici, int nFinal){
-		if (nInici > nFinal) {
-			for(int i = nInici; i >= nFinal; i--){
-				char lletra = text.charAt(i);
-				System.out.println(lletra);
-				}
-				if (nInici > text.length()){
-				
-			}
-		}
-				
 		
-		else if (nInici < nFinal){
-			for (int i = nInici; i <= nFinal; i++){
-				char lletra = text.charAt(i);
-				System.out.println(lletra);
+		if (nInici < nFinal || nFinal < nInici) {
+			intervalNombresDintreCadena(text, nInici, nFinal)
 			}
-		}
 		else if (nFinal > text.length()){
-			for (int i = nInici; i <= text.length();i++){
-			char lletra = text.charAt(i);
-			System.out.println(lletra);
-			}
-		}
-	}
-}
+			intervalNombresForaCadena(text, nFinal);
+			
+
     
 
 				 
