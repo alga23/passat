@@ -13,17 +13,37 @@ public class MostraInterval {
 		int nFinal = Integer.parseInt(Entrada.readLine());
 	
 		
-		mostraInterval(text, nInici, nFinal);
-		
-		}
-		
-		public static void mostraInterval(String text, int nInici, int nFinal){
-		
-		if (nInici < nFinal || nFinal < nInici) {
-			intervalNombresDintreCadena(text, nInici, nFinal)
-			}
-		else if (nFinal > text.length()){
-			intervalNombresForaCadena(text, nFinal);
+		if(nInici> text.length()-1){
+      			nFinal = text.length()-1;
+   			 }
+    		if(nFinal > text.length()-1){
+     			 nInici = text.length()-1;
+   			 }
+ 
+    		mostraInterval(text, nInici, nFinal);
+    }
+ 
+public static void mostraInterval(String text, int nInici, int nFinal) {
+  	if(nInici < 0) {
+       		nInici = 0; 
+    		}
+  	if(nFinal < 0) {
+    		nFinal = 0;
+    		}
+  	if(nInici >= 0 || nFinal >= 0) {
+    		if (nInici < nFinal) {
+      			for (int i = nInici; i <= nFinal; i += 1) {
+        			System.out.println(text.charAt(i));   
+      				}
+   		}
+   		else if(nInici >= nFinal) {
+      		for(int i = nInici; i >=nFinal; i -=1) {
+      			System.out.println(text.charAt(i));
+      } 
+  }
+  }
+}
+}
 			
 
     
