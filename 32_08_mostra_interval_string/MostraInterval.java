@@ -32,8 +32,8 @@ public static void mostraInterval(String text, int nInici, int nFinal) {
     		}
   	if(nInici >= 0 || nFinal >= 0) {
     		if (nInici < nFinal) {
-    			int ultimCar = text.length()-1;
-      			for (int i = nInici; i <= ultimCar; i += 1) {
+    			
+      			for (int i = nInici; i <= nFinal; i += 1) {
         			System.out.println(text.charAt(i));   
       				}
    		}
