@@ -12,6 +12,7 @@ public class NomesLletres{
 	public static void filtraLletres (String text) {
 		if (Character.isLetter(text.charAt(0))){
 			System.out.print(text.charAt(0));
+			}
 			for (int i = 1; i <=text.length()-1; i++) {
 				char lletra = text.charAt(i);
 
@@ -36,7 +37,7 @@ public class NomesLletres{
 					}
 				}
 			}
-		}
+		
 			
 			
 		
