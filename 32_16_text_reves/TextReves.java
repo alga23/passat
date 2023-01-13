@@ -11,15 +11,19 @@ public class TextReves {
 		
 		}
 	public static void mostraReves(String text){
-    		StringBuilder nouText = new StringBuilder();
-
-		for (int i = text.length() -1; i >= 0; i--) {
-			if( i < text.length() - 1) {
-			nouText.append(", " + text.charAt(i));
+    		for(int i = text.length() - 1; i >= 0; i--){
+			if (i == 0){
+				System.out.print(text.charAt(i));
 			}
-			System.out.println(nouText.toString());
+			else {
+				System.out.print(text.charAt(i) + ", ");
 			}
-
 		}
+		System.out.println();
 	}
+}
+
+    			
+    		
+    		
 
