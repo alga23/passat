@@ -10,33 +10,14 @@ public class NomesLletres{
 		}
 		
 	public static void filtraLletres (String text) {
-		if (Character.isLetter(text.charAt(0))){
-			System.out.print(text.charAt(0));
+		for (int i = 1; i < text.length(); i++){
+			String fraseAmbComes = "
 			}
-			for (int i = 1; i <=text.length()-1; i++) {
-				char lletra = text.charAt(i);
 
-				if (Character.isLetter(lletra)){
-					System.out.print(", ");
-					System.out.print(lletra);
-
-					
-				if (lletra == text.length()-1) {
-					System.out.print(lletra);
-					
-				}
-			}								      
-					for (int j = text.length()-1; j < text.length();j++){  
-						char lletraFinal = text.charAt(j);
-						if (Character.isLetter(lletraFinal)){
-						System.out.print(lletraFinal);
-						} 
-						
-						
-						}
-					}
-				}
 			}
+		
+		
+	
 		
 			
 			
