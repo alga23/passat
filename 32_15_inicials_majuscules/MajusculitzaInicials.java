@@ -14,17 +14,18 @@ public class MajusculitzaInicials{
 
 
 		for (int i = 0; i <text.length(); i++) {
-			char lletra = text.charAt(i);
-			char lletraSeguent = text.charAt(i +1);
-			if (Character.isWhitespace(lletraSeguent)){
-				nouText.append(Character.toUpperCase(lletra));
-				}
-				else {
-					nouText.append(lletra);
-					}
-				}
-				String textFinal = nouText.toString();
-				System.out.println(textFinal);
-				}
+			if (i == 0) { 	
+				System.out.print(Character.toUpperCase(text.charAt(i)));
+							
 			}
+ 			else if (Character.isLetter(text.charAt(i)) && Character.isLetter(text.charAt(i - 1)) == false) {
+ 				System.out.print(Character.toUpperCase(text.charAt(i)));
+ 			} else {
+ 				System.out.print(Character.toLowerCase(text.charAt(i)));
+ 			}
+ 		}
+ 		System.out.println();
+ 	}
+ }
+			
 				
