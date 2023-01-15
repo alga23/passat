@@ -10,7 +10,7 @@ public class Semafor {
 		
 		String majorSioNo = Entrada.readLine();
 		
-		if (UtilitatsConfirmacio.respostaABoolean(majorSioNo == true){
+		if (UtilitatsConfirmacio.respostaABoolean(majorSioNo) == true){
 			System.out.println("Color?");
 			String color = Entrada.readLine();
 			colorSemafor(color);
@@ -21,13 +21,13 @@ public class Semafor {
 		}
 		
 	public static void colorSemafor (String color) {
-		if(color.equals("groc"){
+		if(color.equals("groc")){
 			System.out.println("corre!");
 			}
-		else if (color.equals("vermell"){
+		else if (color.equals("vermell")){
 			System.out.println("espera");
 			}
-		else if(color.equals("verd"){
+		else if(color.equals("verd")){
 			System.out.println("passa");
 			}
 		}
