@@ -46,11 +46,14 @@ public class MatriculaValida {
             }
 			} else if (i >= 5 && i <= 6) {
 			    if (!Character.isLetter(matri.charAt(i))){
-			    	 if(Character.isLowerCase(matri.charAt(i)) && (i == 5 || (i == 6 && Character.isLowerCase(matri.charAt(i))))){
-					esValida = false;
-					break;
+				esValida = false;
+				break;
 			    }
 			   }
+			   if (i == matri.length() - 2 || i == matri.length() - 1) {
+        if (Character.isUpperCase(matri.charAt(i))) {
+            esValida = false;
+            break;
         }
     }
     if (!esValida) {
@@ -61,4 +64,5 @@ public class MatriculaValida {
     	}
 				}
 			}
+		}
 		
