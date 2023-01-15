@@ -24,8 +24,7 @@ public class MatriculaValida {
 		boolean esValida = true;
 		for (int i = 0; i < matri.length(); i++) {
 			if (i == 0 || i == 1) {
-			    if (!Character.isLetter(matri.charAt(i))){
-			    	if(!Character.isLowerCase(matri.charAt(i))){
+			    if (!Character.isLetter(matri.charAt(i)) && !Character.isLowerCase(matri.charAt(i))){
 			    	
 			    	if( matri.charAt(i) == 'O' && matri.charAt(i) == 'I' && matri.charAt(i) == 'Q' && matri.charAt(i) == 'U') {
 					esValida = false;
@@ -33,7 +32,7 @@ public class MatriculaValida {
 				}
 			}
 		}
-            }
+            
 			else if (i >= 2 && i <= 4) {
 			    if (!Character.isDigit(matri.charAt(i))) {
 				esValida = false;
