@@ -20,22 +20,26 @@ public class CodificaBasic{
 		}
 	}
 	public static void codifica(String text, int quants) {
+		char lletra;
 		String textCodificat = "";
 		int nombreVocabulari = 26;
 		for(int i = 0; i < text.length(); i++){
-			char lletra =text.charAt(i);
-			if (Character.isLetter(lletra) == true ){
-				
-				int volta = (lletra - 'a' + quants) % nombreVocabulari + 'a';
-				char lletraCodificada= (char) volta;
-				textCodificat += lletraCodificada;
+			  if (text.charAt(i) >= 'a' && text.charAt(i) <= 'z') {
+				if (text.charAt(i) == 'z' && quants > 0) {
+					System.out.print((char)('a' + quants - 1));
+				} else if (text.charAt(i) == 'y' && quants > 1) {
+					System.out.print((char)('a' + quants - 2));
+				} else {
+				lletra = (char)(text.charAt(i) + quants);
+				System.out.print(lletra);
+				}
+			} else {
+				System.out.print(text.charAt(i));
 			}
-			else {
-				textCodificat += lletra;
-			}	
-		System.out.print(textCodificat);
 		}
+		System.out.println();
 	}
 }
+
 		
 	
