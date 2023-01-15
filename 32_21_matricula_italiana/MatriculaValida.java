@@ -9,7 +9,7 @@ public class MatriculaValida {
 		
 		String matricula = Entrada.readLine();
 		
-		if (matricula.length() == 7) {
+		if (matricula.length() == 6) {
 		
 		esLletraValidaPerMatriculaItaliana(matricula);
 		}
