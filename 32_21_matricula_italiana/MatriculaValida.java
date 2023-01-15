@@ -56,6 +56,7 @@ public class MatriculaValida {
             break;
         }
     }
+    }
     if (!esValida) {
         System.out.println("No és una matrícula italiana vàlida");
         
@@ -64,5 +65,5 @@ public class MatriculaValida {
     	}
 				}
 			}
-		}
+		
 		
