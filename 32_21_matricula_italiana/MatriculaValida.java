@@ -24,7 +24,7 @@ public class MatriculaValida {
 		boolean esValida = true;
 		for (int i = 0; i < matri.length(); i++) {
 			if (i == 0 || i == 1) {
-				 if (Character.isLowerCase(matri.charAt(i)) && (i == 0 || (i == 1 && Character.isLowerCase(matri.charAt(i-1))))){
+				 if (Character.isLowerCase(matri.charAt(0)) && Character.isLowerCase(matri.charAt(1))) {
         esValida = false;
         break;
         }
