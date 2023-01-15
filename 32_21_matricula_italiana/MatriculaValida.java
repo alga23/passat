@@ -45,10 +45,12 @@ public class MatriculaValida {
 				break;
             }
 			} else if (i >= 5 && i <= 6) {
-			    if (!Character.isLetter(matri.charAt(i))) {
-				esValida = false;
-				break;
+			    if (!Character.isLetter(matri.charAt(i))){
+			    	 if(Character.isLowerCase(matri.charAt(i))){
+					esValida = false;
+					break;
 			    }
+			   }
         }
     }
     if (!esValida) {
