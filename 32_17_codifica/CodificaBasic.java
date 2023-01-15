@@ -24,7 +24,7 @@ public class CodificaBasic{
 		int nombreVocabulari = 26;
 		for(int i = 0; i < text.length(); i++){
 			char lletra =text.charAt(i);
-			if (Character.isLetter(lletra)){
+			if (Character.isLetter(lletra) == true ){
 				
 				int volta = (lletra - 'a' + quants) % nombreVocabulari + 'a';
 				char lletraCodificada= (char) volta;
