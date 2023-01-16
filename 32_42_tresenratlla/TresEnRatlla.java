@@ -127,7 +127,7 @@ public class TresEnRatlla {
 		System.out.println(jugador);
 		}
 		
-	public boolean jugadorGuanya(char[][] taulell, char jugador){
+	public static boolean jugadorGuanya(char[][] taulell, char jugador){
 		for (int i = 0; i < taulell.length; i++) {
     			if (taulell[i][0] != jugador && taulell[i][0] == taulell[i][1] && taulell[i][1] == taulell[i][2]) {
       return true;
