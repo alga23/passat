@@ -11,8 +11,9 @@ public class NomesLletres{
 		
 	public static void filtraLletres (String text) {
 		String fraseAmbComes = "";
-		for (int i = 1; i < text.length(); i++){
+		for (int i = 0; i < text.length(); i++){
 			if (Character.isLetter(text.charAt(i))){
+				
 				fraseAmbComes = fraseAmbComes+text.charAt(i)+',';
 				
 				}
