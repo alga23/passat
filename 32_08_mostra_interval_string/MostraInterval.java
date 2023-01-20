@@ -11,43 +11,39 @@ public class MostraInterval {
 		int inici = Integer.parseInt(Entrada.readLine());
 		System.out.println("final?");
 		int nFinal = Integer.parseInt(Entrada.readLine());
+		
 	
 		
 		mostraInterval(text, inici, nFinal);
 		}
 		
 	public static void mostraInterval(String text, int inici, int nFinal) {
-		if (inici >= 0 || nFinal>= 0) {
-			if (inici < 0) {
-				inici = 0;
-			}
-			if (nFinal < 0) {
-				nFinal = 0;
-			}	
-			if (inici > text.length() - 1) {
-				inici = text.length() - 1;
-			}	
-			if (nFinal > text.length() - 1) {
-				nFinal = text.length() - 1;
-			}
-			if (inici <= nFinal) {
-				for (int i = inici; i <= nFinal; i++) {
-					if (i >= text.length()) {
-						break;
-					} else {
-						System.out.println(text.charAt(i));
-					}
+		if (inici < nFinal) {
+			if (nFinal > text.length()){
+				for(int i =inici; i < text.length(); i++){
+					System.out.println(text.charAt(i));
 				}
 			}
-			if (nFinal < inici) {
-				for (int i = inici; i >= nFinal; i--) {
-						System.out.println(text.charAt(i));
-					
+			else{
+				
+				for(int i =inici; i <= nFinal; i++){
+				System.out.println(text.charAt(i));
 				}
 			}
-		}	
-	}
-}
+		}
+			
+			
+		else if(inici > nFinal) {
+			
+      			for(int i = inici; i >= nFinal; i--) {
+      				System.out.println(text.charAt(i));
+			}
+				}
+		
+			}
+		} 
+		
+
 			
 				 
 		
