@@ -23,9 +23,10 @@ public class NomesLletres{
 				}
 			
 			}
-			System.out.println(fraseAmbComes);
+
 
 			}
+			System.out.println(fraseAmbComes);
 		}
 	}
 		
