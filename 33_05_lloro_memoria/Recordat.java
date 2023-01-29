@@ -42,12 +42,12 @@ public class Recordat {
      */
     public static void mostraRecords(final String nomFitxer) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(nomFitxer));
-        String linia = input.readLine();
-        if (linia.isBlank()){
-        	      	System.out.println("El lloro no recorda res");
-        	      	}
-       	else{
         	for(String linea = input.readLine(); linea != null; linea = 			input.readLine()) {
+        		if (linea.isBlank()){
+        		 	System.out.println("El lloro no recorda res");
+        		 	break;
+        		 	}
+        		 else{
         		System.out.println("El lloro recorda: " + linea);
         	}
         System.out.println("Adéu");
