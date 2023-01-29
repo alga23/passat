@@ -39,7 +39,7 @@ public class NotaMitja {
     			nombre = liniasSeparades[i].charAt(0);
     			if (Character.isDigit(nombre)){
     				int conversio = nombre;
-    				conjuntNotes[i -1] = conversio;
+    				conjuntNotes[i] = conversio;
     				}
     			}
     		}
