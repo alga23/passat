@@ -13,6 +13,7 @@ public class Recordat {
         System.out.println("D'acord");
         mostraRecords(cami);
     }
+    
 
     /**
      * Demana frases per entrada estàndard i les guarda a un fitxer
@@ -22,10 +23,6 @@ public class Recordat {
      BufferedWriter input = new BufferedWriter(new FileWriter(nomFitxer));
       System.out.println("El lloro pregunta paraula:");
       String paraula = Entrada.readLine();
-      if (paraula.isBlank()) {
-      	System.out.println("El lloro no recorda res");
-      	}
-      else{
       while(!paraula.isBlank()){
       	System.out.println("El lloro registra: " + paraula);
       	input.write(paraula);
@@ -33,10 +30,11 @@ public class Recordat {
       	System.out.println("El lloro pregunta paraula:");
       	paraula=Entrada.readLine();
       	}
-      }
+      
       	input.close();
+      	}
       	
-    }
+    
 
     /**
      * Mostra el contingut del fitxer amb nom nomFitxer
@@ -44,13 +42,19 @@ public class Recordat {
      */
     public static void mostraRecords(final String nomFitxer) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(nomFitxer));
-        for(String linea = input.readLine(); linea != null; linea = input.readLine()) {
-        	System.out.println("El lloro recorda: " + linea);
+        String linia = input.readLine();
+        if (linia.isBlank()){
+        	      	System.out.println("El lloro no recorda res");
+        	      	}
+       	else{
+        	for(String linea = input.readLine(); linea != null; linea = 			input.readLine()) {
+        		System.out.println("El lloro recorda: " + linea);
         	}
-        	System.out.println("Adéu");
-        	input.close();
+        System.out.println("Adéu");
+        input.close();
         }
 
     }
+   }
 
 
