@@ -11,21 +11,26 @@ public class NotaMitja {
         String cami = "notes.csv";
         FileReader fileReader = new FileReader(cami);
         BufferedReader input = new BufferedReader(fileReader);
-        if (input.readLine() == null){
-        	System.out.println("Cap entrada");
-        	}
-        else{
-	String linia ="";       
+        int lineas = 0;
+    	for (String line; (line = input.readLine()) != null;) {
+        	lineas++;
+    	}
+    if (lineas == 1) {
+        System.out.println("Cap entrada");
+    } else if (lineas > 1){
+        String linia ="";       
         for (int i = 2; (linia = input.readLine()) != null; i++) {
     		sumaNotes(linia);
     		System.out.println();
 		}
 	}
+
 	input.close();
+	}
             	
             		
             	
-            	}
+            	
         
 
     
