@@ -33,22 +33,22 @@ public class NotaMitja {
     public static void sumaNotes(String linia) {
     	String [] liniasSeparades = linia.split(",");
     	char nombre = ' ';
+    	double notaMitja = 0;
     	int[] conjuntNotes = new int[6];
     	for (int i = 1; i < liniasSeparades.length; i++){
     		if (liniasSeparades[i].length() == 1) {
     			nombre = liniasSeparades[i].charAt(0);
     			if (Character.isDigit(nombre)){
-    				int conversio = nombre;
-    				conjuntNotes[i] = conversio;
+    				int nombreInt = (int)nombre - (int) '0';
+    				String nombreString = String.valueOf(nombreInt);
+    				double numero = Double.parseDouble(nombreString);
+            			notaMitja = notaMitja + numero;
     				}
     			}
     		}
-    		double notaFinal = 0;
-    		for (int i= 0; i < conjuntNotes.length; i++){
-    			notaFinal =+ conjuntNotes[i];
-    			}
-    			notaFinal = notaFinal / 6;
-    			System.out.printf("%s(%.2f)",liniasSeparades[0], notaFinal);
+    		
+    			notaMitja = notaMitja / 6;
+    			System.out.printf("%s (%.2f)",liniasSeparades[0], notaMitja);
     			}
     		}
     			
