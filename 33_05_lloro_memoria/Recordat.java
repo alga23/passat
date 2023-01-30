@@ -1,7 +1,6 @@
 /*
  * programa que simula un lloro que recorda les frases que li han dit
  /i les guarda a un fitxer
- /que després ens ho recordarà repetint-les
  
  */
 import java.io.BufferedReader;
@@ -45,28 +44,19 @@ public class Recordat {
      */
     public static void mostraRecords(final String nomFitxer) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(nomFitxer));
-        String linia = input.readLine();
-        if( linia == null) {
-        	System.out.println("El archivo está vacío.");
-
-        	
-    	} 
-
-    	else {
-        	for (int i = 0; i < 3; i++) {
-        		input.reset();
-        		String linea = new String();
-        		while ((linea = input.readLine()) != null) {
-        			System.out.println("El lloro recorda: " + linea);
+        if (!input.ready()){
+        	System.out.println("El lloro no recorda res");
+        	}
+        else{
+        	for(String linea = input.readLine(); linea != null; linea = input.readLine()) {
+        		System.out.println("El lloro recorda: " + linea);
         	}
         }
-       }
         System.out.println("Adéu");
         input.close();
         }
 
     }
-   
    
 
 
