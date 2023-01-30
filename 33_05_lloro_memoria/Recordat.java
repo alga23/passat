@@ -53,16 +53,20 @@ public class Recordat {
     	} 
 
     	else {
-    		input.reset();
-        	for(String linea = input.readLine(); linea != null; linea = input.readLine()) {
-        		System.out.println("El lloro recorda: " + linea);
+        	for (int i = 0; i < 3; i++) {
+        		input.reset();
+        		String linea = new String();
+        		while ((linea = input.readLine()) != null) {
+        			System.out.println("El lloro recorda: " + linea);
         	}
+        }
+       }
         System.out.println("Adéu");
         input.close();
         }
 
     }
-   }
+   
    
 
 
