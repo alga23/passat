@@ -48,11 +48,12 @@ public class Recordat {
         String linia = input.readLine();
         if( linia == null) {
         	System.out.println("El archivo está vacío.");
-        	input.reset();
+
         	
     	} 
 
     	else {
+    		input.reset();
         	for(String linea = input.readLine(); linea != null; linea = input.readLine()) {
         		System.out.println("El lloro recorda: " + linea);
         	}
