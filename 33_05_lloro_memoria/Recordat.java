@@ -45,9 +45,14 @@ public class Recordat {
      */
     public static void mostraRecords(final String nomFitxer) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(nomFitxer));
-        if(input.readLine() == null) {
+        String linia = input.readLine();
+        if( linia == null) {
         	System.out.println("El archivo está vacío.");
-    	} else {
+        	input.reset();
+        	
+    	} 
+
+    	else {
         	for(String linea = input.readLine(); linea != null; linea = input.readLine()) {
         		System.out.println("El lloro recorda: " + linea);
         	}
