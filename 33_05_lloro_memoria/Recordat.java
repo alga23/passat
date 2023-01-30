@@ -25,9 +25,9 @@ public class Recordat {
      BufferedWriter input = new BufferedWriter(new FileWriter(nomFitxer));
       System.out.println("El lloro pregunta paraula:");
       String paraula = Entrada.readLine();
+      paraula = paraula.trim();
       while(!paraula.isBlank()){
       	System.out.println("El lloro registra: " + paraula);
-      	paraula=paraula.trim();
       	input.write(paraula);
       	input.newLine();
       	System.out.println("El lloro pregunta paraula:");
