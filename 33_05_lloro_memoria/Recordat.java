@@ -27,6 +27,7 @@ public class Recordat {
       String paraula = Entrada.readLine();
       while(!paraula.isBlank()){
       	System.out.println("El lloro registra: " + paraula);
+      	paraula=paraula.trim();
       	input.write(paraula);
       	input.newLine();
       	System.out.println("El lloro pregunta paraula:");
