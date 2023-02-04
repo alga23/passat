@@ -12,12 +12,18 @@ public class NotaMitja {
         FileReader fileReader = new FileReader(cami);
         BufferedReader input = new BufferedReader(fileReader);
         int lineas = 0;
-    	String linia = new String();      
+    	for (String linia; (linia = input.readLine()) != null;) {
+        	lineas++;
+		}
+	if (lineas == 1) {
+        System.out.println("Cap entrada");
+    } else if (lineas > 1){
+        String linia ="";       
         for (int i = 2; (linia = input.readLine()) != null; i++) {
     		sumaNotes(linia);
     		System.out.println();
 		}
-	
+	}
 
 	input.close();
 	}
