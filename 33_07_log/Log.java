@@ -12,7 +12,7 @@ public class Log{
 	public static void printError(String linia) throws IOException {
 		String camiLog = "log.txt";
 		BufferedWriter log = new BufferedWriter(new FileWriter(camiLog, true));
-		log.write("[ " + comptador + " } " + "ERROR: " + linia);
+		log.write("[ " + comptador + " ] " + "ERROR: " + linia);
 		comptador++;
 		System.out.println("[ " + comptador + " } " + "ERROR: " + linia);
 		log.close();
@@ -24,7 +24,7 @@ public class Log{
 		BufferedWriter log = new BufferedWriter(new FileWriter(camiLog, true));
 		log.write("[ " + comptador + " } " + "WARNING: " + linia);
 		comptador++;
-		System.out.println("[ " + comptador + " } " + "WARNING: " + linia);
+		System.out.println("[ " + comptador + " ] " + "WARNING: " + linia);
 		log.close();
 		}
 		
@@ -32,18 +32,18 @@ public class Log{
 	public static void printInfo(String linia)  throws IOException {
 		String camiLog = "log.txt";
 		BufferedWriter log = new BufferedWriter(new FileWriter(camiLog, true));
-		log.write("[ " + comptador + " } " + "INFO: Argument " + linia+ ":   " +linia);
+		log.write("[ " + comptador + " ] " + "INFO: Argument " + linia+ ":   " +linia);
 		comptador++;
-		System.out.println("[ " + comptador + " } " + "ARGUMENT: " + linia);
+		System.out.println("[ " + comptador + " ] " + "ARGUMENT: " + linia);
 		log.close();
 		}
 		
 	public static void printDebug(String linia)  throws IOException {
 		String camiLog = "log.txt";
 		BufferedWriter log = new BufferedWriter(new FileWriter(camiLog, true));
-		log.write("[ " + comptador + " } " + "DEBUG: " + linia);
+		log.write("[ " + comptador + " ] " + "DEBUG: " + linia);
 		comptador++;
-		System.out.println("[ " + comptador + " } " + "DEBUG: " + linia);
+		System.out.println("[ " + comptador + " ] " + "DEBUG: " + linia);
 		log.close();
 		}
 		
