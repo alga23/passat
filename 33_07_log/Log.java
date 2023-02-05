@@ -7,49 +7,65 @@ import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.IOException;
 public class Log{
-	private static int comptador = 0;
-	
-	public static void printError(String linia) throws IOException {
-		String camiLog = "log.txt";
-		BufferedWriter log = new BufferedWriter(new FileWriter(camiLog, true));
-		log.write("[ " + comptador + " ] " + "ERROR: " + linia);
-		comptador++;
-		System.out.println("[ " + comptador + " } " + "ERROR: " + linia);
-		log.close();
+	 static private int numLinea =1;     
+            
+	    public static String printError(String msjTexto) throws IOException {
+	       
+		String cami = "log.txt";
+		BufferedWriter sortida = new BufferedWriter(new FileWriter(cami, true));
+		//                          El mode ampliació s'especifica aquí  ↑↑↑
+		String error = "["+ numLinea + "] ERROR: " + msjTexto;
+		sortida.write(error);
+		numLinea++;
+		sortida.newLine();      
+		sortida.close();
+		return error.toString();
+	    }
+	    
+	       public static String printWarning(String msjTexto) throws IOException {
+	       
+		String cami = "log.txt";
+		BufferedWriter sortida = new BufferedWriter(new FileWriter(cami, true));
+		//                          El mode ampliació s'especifica aquí  ↑↑↑
+		String warnig = "["+ numLinea + "] WARNING: " + msjTexto;
+		sortida.write(warnig);
+		numLinea++;
+		sortida.newLine();
+		sortida.close();
+		return warnig.toString();
+	    }
+	    
+	      public static String printInfo(String msjTexto) throws IOException {
+	       
+		String cami = "log.txt";
+		BufferedWriter sortida = new BufferedWriter(new FileWriter(cami, true));
+		//                          El mode ampliació s'especifica aquí  ↑↑↑
 		
-		}
-		
-	public static void printWarning(String linia) throws IOException {
-		String camiLog = "log.txt";
-		BufferedWriter log = new BufferedWriter(new FileWriter(camiLog, true));
-		log.write("[ " + comptador + " } " + "WARNING: " + linia);
-		comptador++;
-		System.out.println("[ " + comptador + " ] " + "WARNING: " + linia);
-		log.close();
-		}
-		
-		
-	public static void printInfo(String linia)  throws IOException {
-		String camiLog = "log.txt";
-		BufferedWriter log = new BufferedWriter(new FileWriter(camiLog, true));
-		log.write("[ " + comptador + " ] " + "INFO: Argument " + linia+ ":   " +linia);
-		comptador++;
-		System.out.println("[ " + comptador + " ] " + "ARGUMENT: " + linia);
-		log.close();
-		}
-		
-	public static void printDebug(String linia)  throws IOException {
-		String camiLog = "log.txt";
-		BufferedWriter log = new BufferedWriter(new FileWriter(camiLog, true));
-		log.write("[ " + comptador + " ] " + "DEBUG: " + linia);
-		comptador++;
-		System.out.println("[ " + comptador + " ] " + "DEBUG: " + linia);
-		log.close();
-		}
-		
+		String info = "["+ numLinea + "] INFO: " + msjTexto;
+		sortida.write(info);
+		numLinea++;
+		sortida.newLine();
+		sortida.close();
+		return info.toString();
+	    }
+	    
 	     public static void reset() {
 	       
-	       comptador=0;
-	}
+	       numLinea=1;
+	    }
+	    
+	       public static String printDebug(String msjTexto) throws IOException {
+	       
+		String cami = "log.txt";
+		BufferedWriter sortida = new BufferedWriter(new FileWriter(cami, true));
+		//                          El mode ampliació s'especifica aquí  ↑↑↑       
+		String debug = "["+ numLinea + "] DEBUG: " + msjTexto;
+		sortida.write(debug);
+		numLinea++;
+		sortida.newLine();
+		sortida.close();
+		return debug.toString();
+	    }
+		
 }
 		
