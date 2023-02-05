@@ -11,51 +11,49 @@ public class NotaMitja {
         String cami = "notes.csv";
         FileReader fileReader = new FileReader(cami);
         BufferedReader input = new BufferedReader(fileReader);
-        int lineas = 0;
-    	for (String linia; (linia = input.readLine()) != null;) {
-        	lineas++;
-		}
-	if (lineas == 1) {
-        System.out.println("Cap entrada");
-    } else if (lineas > 1){
-        String linia ="";       
-        for (int i = 2; (linia = input.readLine()) != null; i++) {
-    		sumaNotes(linia);
-    		System.out.println();
-		}
-	}
-
-	input.close();
-	}
-            	
-            		
-            	
-            	
         
-
-    
-    
-    public static void sumaNotes(String linia) {
-    	String [] liniasSeparades = linia.split(",");
-    	char nombre = ' ';
-    	double notaMitja = 0;
-    	int[] conjuntNotes = new int[6];
-    	for (int i = 1; i < liniasSeparades.length; i++){
-    		if (liniasSeparades[i].length() == 1) {
-    			nombre = liniasSeparades[i].charAt(0);
-    			if (Character.isDigit(nombre)){
-    				int nombreInt = (int)nombre - (int) '0';
-    				String nombreString = String.valueOf(nombreInt);
-    				double numero = Double.parseDouble(nombreString);
-            			notaMitja = notaMitja + numero;
-    				}
-    			}
-    		}
-    		
-    			notaMitja = notaMitja / 6;
-    			System.out.printf("%s (%.2f)",liniasSeparades[0], notaMitja);
-    			}
-    		}
+        double parseDouble=0.0;
+    	double sumaDoubles =0.0;
+    	int intContador=0;
+       
+        String strLinia = input.readLine();
+    	intContador += 1;
+             
+	while (true) {   		    
+		sumaDoubles=0;
+		strLinia = input.readLine();   
+		   
+			   if (null != strLinia){
+			     intContador += 1;
+			   }
+			   		    
+			   if(intContador>1){
+				    if(null == strLinia)break; 				    
+				    String []cadena = strLinia.split(",");   					     
+				    System.out.print(cadena[0]+ " ");
+				    for(int i =1; i<cadena.length; i++){          
+				    boolean blConfirma= UtilString.esEnter(cadena[i]);				    
+					if(blConfirma){
+					parseDouble = 
+Double.parseDouble(cadena[i]);                  
+				 sumaDoubles = sumaDoubles + parseDouble;
+						 }
+				     
+				    }
+			    
+			  }
+			  else{
+			  System.out.println("Cap entrada");return;
+			  }
+			  
+			  System.out.printf( "(%.2f)%n", sumaDoubles/6 );      
+		  
+		} 
+            
+        input.close();
+    }
+}
+       
     			
     			 
     			
