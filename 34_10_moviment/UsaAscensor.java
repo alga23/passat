@@ -7,7 +7,7 @@ public class UsaAscensor{
 	public static void main(String [] args) {
 		Ascensor ascensor;
 		ascensor = new Ascensor();
-		System.out.println("Pis inicial:" + ascensor.pis);
+		System.out.println("Pis inicial: " + ascensor.pis);
 		System.out.println("Moviment inicial: " + ascensor.moviment);
 		if(ascensor.moviment.equals("aturat")){
 			ascensor.moviment = "pujant";
