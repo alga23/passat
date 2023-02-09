@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 public class FitxerVocalIniciFi  {
 	public static void main (String[] args) throws IOException {
-		 String cami = "frases.txt";
+		String cami = "frases.txt";
         	FileReader fileReader = new FileReader(cami);
         	BufferedReader input = new BufferedReader(fileReader);
         	while (true) {
