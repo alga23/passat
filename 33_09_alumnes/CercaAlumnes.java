@@ -1,10 +1,3 @@
-/*Programa que buscarà els
-/alumnes d'u csv segon el
-/argument que li introduim
-/depenent de que si el que hem 
-/introduit es troba al nom o al 
-/correu eletronic
-*/
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
@@ -49,11 +42,7 @@ public class CercaAlumnes {
     // converteix un array de notes a CSV
     // Té en comptes els valors NP com a -1
     public static String notesACsv(int[] notes) {
-       StringBuffer sb = new StringBuffer();
-		for(int i=0;i<notes.length;i++){
-		   sb.append(array[i]+";");
-		}
-		return sb.toString();
+        // XXX a completar
     }
 
     public static String alumneACsv(Alumne alumne) {
@@ -86,4 +75,3 @@ public class CercaAlumnes {
         // XXX a completar
     }
 }
- 
