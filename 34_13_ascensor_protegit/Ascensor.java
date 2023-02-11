@@ -21,11 +21,11 @@ public class Ascensor {
 		return moviment;
 		}
 	public void setMoviment (String nouMoviment) {
-		if (nouMoviment.equals("pujant") || nouMoviment.equals("baixant")){
+		if (nouMoviment.equals("pujant") || nouMoviment.equals("baixant") || nouMoviment.equals("aturat")){
 			moviment = nouMoviment;
 		}
 		else {
-			moviment = "aturat";
+			moviment = moviment;
 		}
 	}
 }
