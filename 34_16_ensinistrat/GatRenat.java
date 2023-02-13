@@ -1,8 +1,10 @@
 /*aquesta classe conté les variables, els sets i els gets d'UsaGatRenat perquè quest pugui funcionar i sigui un bon gat */
 public class GatRenat {
-	public boolean estatAixecat = false;
-	public boolean estatEstirat = false;
-        public boolean estatAssegut = false;
+	private boolean estatAixecat = false;
+	private boolean estatEstirat = false;
+        private boolean estatAssegut = false;
+        private String posicio = "estirat";
+
 	
 	public String aixecat () {
 		if (estatAixecat == false){
@@ -45,7 +47,48 @@ public class GatRenat {
 		return "";
 
 		}
-	}
+		//posem els set i els get de vides
+	
+	
+	
+        //posem els get i el set de posicio
+        public String getPosicio(){
+        	return posicio;
+        }
+        public void setPosicio (String novaPosicio) {
+        		
+        	 if (novaPosicio.equals("dret") || novaPosicio.equals("assegut")) {
+        		posicio = novaPosicio;
+        		}
+        	else {	
+        		posicio = "estirat";
+        	}
+        }
+        
+        //posem les preguntes de les variables que hem fet en aquest exercici
+       
+        public boolean estaDret () {
+        	if (posicio.equals("dret")){return true;}
+        	else {	
+        		return false;}
+        	}
+        	
+        	
+        	
+        public boolean estaAssegut () {
+        	if (posicio.equals("assegut")){return true;}
+        	else {
+        		return false;}
+        	}
+        	
+        public boolean estaEstirat() {
+        	if (posicio.equals("estirat")){return true;}
+        	else {
+        		return false;}
+        	}
+        }
+		
+	
 		
 		
 	
