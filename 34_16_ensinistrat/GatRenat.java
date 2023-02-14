@@ -1,53 +1,50 @@
 /*aquesta classe conté les variables, els sets i els gets d'UsaGatRenat perquè quest pugui funcionar i sigui un bon gat */
 public class GatRenat {
-	private boolean estatAixecat = false;
-	private boolean estatEstirat = false;
-        private boolean estatAssegut = false;
+	private boolean estaAixecat = false;
+	private boolean estaEstirat = false;
+        private boolean estaAssegut = false;
         private String posicio = "estirat";
+        
 
 	
-	public String aixecat () {
-		if (estatAixecat == false){
-			estatAixecat = true;
-			return "m'aixeco";
-
-			}
-		else if (estatAixecat == true){
+	public String aixecat (){
+		estaAixecat = true;
+		estaEstirat = false;
+		estaAssegut = false;
+		return "m'aixeco";
+		if (estaAixecat == true){
 			return "no faig res";
-		}
-		return "";
-	}
+			}
+		} 
+		
+		
 	
 
 	
 
 	public String estirat () {
-		if (estatEstirat == false){
-			estatEstirat = true;
-			return "m'estiro";
-
-			}
-		else if (estatEstirat == true){
+		estaEstirat = true;
+		estaAixecat = false;
+		estaAssegut = false;
+		return "m'estiro";
+		if (estaEstirat == true){
 			return "no faig res";
-		}
-		return "";
-	}
+			}
+		} 
+	
 		
 		
 	
 	public String seu () {
-	if (estatAssegut == false){
-			estatAssegut = true;
-			return "m'assec";
-
-			}
-		else if (estatAssegut == true){
+		estaAssegut = true;
+		estaAixecat = false;
+		estaEstirat = false;
+		return "m'estiro";
+		if (estaAssegut == true){
 			return "no faig res";
-		}
-		return "";
-
-		}
-		//posem els set i els get de vides
+			}
+		} 
+	
 	
 	
 	
