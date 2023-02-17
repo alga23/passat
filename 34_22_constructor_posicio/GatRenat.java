@@ -11,6 +11,7 @@ public class GatRenat {
         setPosicio(posicio);
     }
     public int getVides() { return vides; }
+    public String getPosicio() { return posicio; }
     public void setVides(int novesVides) {
         if (novesVides >= 0)  {
             vides = novesVides;
