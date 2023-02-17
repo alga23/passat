@@ -16,5 +16,11 @@ public class GatRenat {
     public int getVides() { return vides; }
     
     public String getPosicio() { return posicio; }
-    }
+    
+    
+    public static void main (String [] args) {
+		GatRenat renat = new GatRenat();
+		System.out.println(renat);
+		}
+	}
 
