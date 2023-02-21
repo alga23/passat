@@ -1,3 +1,7 @@
+/*Classe Ascensor que ens dirà 
+/a quina planta està
+
+
 public class Ascensor {
     public int pis = -1;
     public static void pujaPis(Ascensor ascensor) {
