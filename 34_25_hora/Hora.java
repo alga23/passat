@@ -94,6 +94,11 @@ public class  Hora {
 	    }
 	}
 	public void decrementa() {
+	    if (hores == 0 && minuts == 0 && segons == 0) {
+	    	hores = 23;
+	    	minuts = 59;
+	    	segons = 59;
+	    	};
 	    if (segons > 0) {
 		segons--;
 	    } else {
@@ -108,6 +113,7 @@ public class  Hora {
 		    }
 		}
 	    }
+	    
 }
 
 	
