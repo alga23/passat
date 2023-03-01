@@ -156,7 +156,7 @@ public class  Hora {
 		}
 		
     @Override
-    public String toString() { return String.format(" %d:%02d:%02d", hores, minuts, segons); }
+    public String toString() { return String.format("%d:%02d:%02d", hores, minuts, segons); }
     
     /**
  * Compara dues hores i retorna l'operador corresponent
