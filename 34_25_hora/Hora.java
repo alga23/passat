@@ -114,11 +114,14 @@ public class  Hora {
 		    segons = totalSegons % 60;
 
 		    if (totalSegons == 0 && decrementSegons > 0) {
-			hores = 0;
-			minuts = 0;
-			segons = 0;
+			hores = 23;
+			minuts = 59;
+			segons = 59;
 		    } else if (decrementSegons > totalSegons) {
-			hores += 24;
+			totalSegons += 86400;
+			hores = totalSegons / 3600;
+			minuts = (totalSegons % 3600) / 60;
+			segons = totalSegons % 60;
 		    }
 		}
 
