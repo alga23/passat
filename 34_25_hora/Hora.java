@@ -106,19 +106,22 @@ public class  Hora {
 
 	
 	public void decrementa(int decrementSegons) {
-	    segons -= decrementSegons;
-	    while (segons < 0) {
-		segons += 60;
-		minuts--;
-		if (minuts < 0) {
-		    minuts += 60;
-		    hores--;
-		    if (hores < 0) {
-		        hores += 24;
-		    }
-		}
+	    int totalSegons = (hores * 3600) + (minuts * 60) + segons;
+	    totalSegons = Math.max(totalSegons - decrementSegons, 0);
+
+	    hores = totalSegons / 3600;
+	    minuts = (totalSegons % 3600) / 60;
+	    segons = totalSegons % 60;
+
+	    if (totalSegons == 0 && decrementSegons > 0) {
+		hores = 23;
+		minuts = 59;
+		segons = 59;
+	    } else if (decrementSegons > totalSegons) {
+		hores += 24;
 	    }
 	}
+
 
 
 	public void decrementa() {
