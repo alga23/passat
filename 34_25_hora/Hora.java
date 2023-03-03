@@ -14,10 +14,16 @@ public class  Hora {
 		this.getSegons();
 		}
 	public Hora (int hores, int minuts, int segons){
+	if (hores < 23) {
 		setHores(hores);
+		}
+	if (minuts < 60) {
 		setMinuts(minuts);
+		}
+	if (segons < 60) {
 		setSegons(segons);
 		}
+	}
 	public int getHores () {return hores;}
 	
 	public int getMinuts () {return minuts;}
