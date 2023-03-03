@@ -65,24 +65,38 @@ public class  Hora {
 	}
 
 	public void incrementa (int incrementSegons) {
-	    if (incrementSegons >= 0) {
+	  if (incrementSegons >= 0) {
 		segons += incrementSegons;
+		while (segons >= 60) {
+		    segons -= 60;
+		    minuts++;
+		    if (minuts >= 60) {
+		        minuts = 0;
+		        hores++;
+		        if (hores >= 24) {
+		            hores = 0;
+		        }
+		    }
+		}
 	    } else {
-		segons -= Math.abs(incrementSegons);
-	    }
-	    
-	    while (segons >= 60) {
-		segons -= 60;
-		minuts++;
-		if (minuts >= 60) {
-		    minuts = 0;
-		    hores++;
-		    if (hores >= 24) {
-		        hores = 0;
+		while (incrementSegons < 0) {
+		    incrementSegons++;
+		    segons--;
+		    if (segons < 0) {
+		        segons = 59;
+		        minuts--;
+		        if (minuts < 0) {
+		            minuts = 59;
+		            hores--;
+		            if (hores < 0) {
+		                hores = 23;
+		            }
+		        }
 		    }
 		}
 	    }
 	}
+
 
 	
 	public void decrementa(int decrementSegons) {
