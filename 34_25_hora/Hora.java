@@ -65,7 +65,12 @@ public class  Hora {
 	}
 
 	public void incrementa (int incrementSegons) {
-	    segons += incrementSegons;
+	    if (incrementSegons >= 0) {
+		segons += incrementSegons;
+	    } else {
+		segons -= Math.abs(incrementSegons);
+	    }
+	    
 	    while (segons >= 60) {
 		segons -= 60;
 		minuts++;
@@ -78,6 +83,7 @@ public class  Hora {
 		}
 	    }
 	}
+
 	
 	public void decrementa(int decrementSegons) {
 	       int totalSegons = this.hores * 3600 + this.minuts * 60 + this.segons;
