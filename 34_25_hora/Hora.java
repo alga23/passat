@@ -106,18 +106,19 @@ public class  Hora {
 
 	
 	public void decrementa(int decrementSegons) {
-		    // Convertir a segundos
 		    int totalSegons = (hores * 3600) + (minuts * 60) + segons;
+	    totalSegons = (totalSegons - decrementSegons % 86400 + 86400) % 86400;
 
-		    // Sumar el tiempo que se debe restar
-		    totalSegons += 86400 - decrementSegons;
+	    hores = totalSegons / 3600;
+	    minuts = (totalSegons % 3600) / 60;
+	    segons = totalSegons % 60;
 
-		    // Convertir a formato de tiempo
-		    hores = (totalSegons / 3600) % 24;
-		    minuts = (totalSegons / 60) % 60;
-		    segons = totalSegons % 60;
-		}
-
+	    if (decrementSegons >= 86400) {
+		hores = 23;
+		minuts = 59;
+		segons = 59;
+	    }
+	}
 
 
 	public void decrementa() {
