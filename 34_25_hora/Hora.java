@@ -80,19 +80,21 @@ public class  Hora {
 	}
 	
 	public void decrementa(int decrementSegons) {
-	    segons -= decrementSegons;
-	    while (segons < 0) {
-		segons += 60;
-		minuts--;
-		if (minuts < 0) {
-		    minuts += 60;
-		    hores--;
-		    if (hores < 0) {
-		        hores += 24;
-		    }
-		}
-	    }
-	}
+	      int totalSegons = this.hores * 3600 + this.minuts * 60 + this.segons;
+    totalSegons -= decrementSegons;
+    
+    if (totalSegons < 0) {
+        totalSegons += 86400;
+    }
+    
+    this.hores = totalSegons / 3600;
+    totalSegons = totalSegons % 3600;
+    
+    this.minuts = totalSegons / 60;
+    totalSegons = totalSegons % 60;
+    
+    this.segons = totalSegons;
+}
 	public void decrementa() {
 
     if (segons > 0) {
