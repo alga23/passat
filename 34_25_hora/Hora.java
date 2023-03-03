@@ -94,27 +94,27 @@ public class  Hora {
 	    }
 	}
 	public void decrementa() {
-	    if (hores == 0 && minuts == 0 && segons == 0) {
-	    	hores = 23;
-	    	minuts = 59;
-	    	segons = 59;
-	    	};
-	    if (segons > 0) {
-		segons--;
-	    } else {
-		if (minuts > 0) {
-		    minuts--;
-		    segons = 59;
-		} else {
-		    if (hores > 0) {
-		        hores--;
-		        minuts = 59;
-		        segons = 59;
-		    }
-		}
-	    }
-	    
+
+    if (segons > 0) {
+        segons--;
+    } else {
+        if (minuts > 0) {
+            minuts--;
+            segons = 59;
+        } else {
+            if (hores > 0) {
+                hores--;
+                minuts = 59;
+                segons = 59;
+            } else {
+                hores = 23;
+                minuts = 59;
+                segons = 59;
+            }
+        }
+    }
 }
+
 
 	
 	public int compareTo (Hora hora2) {
