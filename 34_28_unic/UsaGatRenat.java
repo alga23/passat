@@ -3,7 +3,6 @@
 /una nova posició
 */ 
  public class UsaGatRenat {
-     public class UsaGatRenat {
     public static void main(String[] args) {
         GatRenat renat = GatRenat.getInstancia();
         System.out.println("Inicialment Renat està " + renat.getPosicio());
@@ -27,5 +26,6 @@
         GatRenat.getInstancia(novaPosicio);
     }
 }
+
 
         
