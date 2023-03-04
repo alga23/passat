@@ -70,9 +70,9 @@ public class GatRenat {
 }
         
         public UllDeGat getUllEsquerre() {
-            UllDeGat ull = ulls[1]; 
-            return ull;
-        }
+           UllDeGat ull = new UllDeGat(ulls[1].estaObert()); 
+    	   return ull;
+}
         public void aixecat(){
             setPosicio("dret");
             ulls[1].obret();
