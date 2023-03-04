@@ -65,9 +65,9 @@ public class GatRenat {
             else return false;
         }
         public UllDeGat getUllDret() {
-            UllDeGat ull = ulls[0]; 
-            return ull;
-        }
+             UllDeGat ull = new UllDeGat(ulls[0].estaObert()); 
+    	     return ull;
+}
         
         public UllDeGat getUllEsquerre() {
             UllDeGat ull = ulls[1]; 
