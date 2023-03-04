@@ -12,16 +12,15 @@
          }
      }
      private static void canviaPosicio(String novaPosicio) {
-	 String posicio = novaPosicio;
-    if (novaPosicio.equals("1") || novaPosicio.equals("estirat")) {
-        posicio = "estirat";
-    } else if (novaPosicio.equals("2") || novaPosicio.equals("assegut")) {
-        posicio = "assegut";
-    } else if (novaPosicio.equals("3") || novaPosicio.equals("dret")) {
-        posicio = "dret";
-    }
-      GatRenat.getInstancia(novaPosicio);
-
+if(novaPosicio.equals("1")){
+            this.posicio= "estirat"
           }
-         }
-        
+          if(novaPosicio.equals("2")){
+            this.posicio= "assegut"
+          }
+           if(novaPosicio.equals("3")){
+            this.posicio= "dret"
+          }
+          if(!novaPosicio.equlas("1") || !novaPosicio.equlas("2") || !novaPosicio.equlas("3")){
+            this.posico= novaPosicio;
+          }

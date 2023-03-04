@@ -24,26 +24,38 @@ public class GatRenat {
     		}
     public static GatRenat getInstancia(){
     	if (instancia == null) {
-            instancia = new GatRenat();
+                GatRenat instancia = new GatRenat();
+                return instancia; 
+            } else {
+                return instancia;
+            }
         }
-        return instancia;
-    }
      public static GatRenat getInstancia(int vides){
            if (instancia == null) {
-            	instancia = new GatRenat(vides);
-        }
+            	GatRenat instancia = new GatRenat(vides);
+        } else {
+                instancia.setVides(vides);
+                return instancia;
+            }
         return instancia;
     }
      public static GatRenat getInstancia(String posicio){
         if (instancia == null) {
             instancia = new GatRenat(posicio);
-        }
+        } else {
+                instancia.setPosicio(posicio);
+                return instancia;
+            }
         return instancia;
     }
      public static GatRenat getInstancia(int vides, String posicio){
          if (instancia == null) {
             instancia = new GatRenat(vides, posicio);
-        }
+        } else {
+        	instancia.setVides(vides);
+                instancia.setPosicio(posicio);
+                return instancia;
+            }
         return instancia;
     }
     public int getVides() { return vides; }
