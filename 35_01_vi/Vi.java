@@ -56,13 +56,7 @@ public class Vi{
             return "NOM NO VÀLID!";
             }
             else{
-		nom = nom.trim();
-		for ( int i = 0; i < nom.length(); i++) {
-			if (nom.charAt(i) == ' ') {
-				nom =nom.replace(nom.charAt(i), ' ');
-				}
-			}
-			return nom;
+		        return nom.replaceAll("\\p{javaSpaceChar}{2,}", " ");
 			}
 		}
 			
