@@ -52,6 +52,10 @@ public class Vi{
 		}
 			
 	public static String normalitzaNom(String nom) {
+	 if (nom.isEmpty() || nom.isBlank() || nom == null) {
+            return "NOM NO VÀLID!";
+            }
+            else{
 		nom = nom.trim();
 		for ( int i = 0; i < nom.length(); i++) {
 			if (nom.charAt(i) == ' ') {
@@ -60,6 +64,7 @@ public class Vi{
 			}
 			return nom;
 			}
+		}
 			
 	public boolean esValid() {
 		if (this.nom.equals("NOM NO VÀLID!") || this.preu == -1 || this.estoc == -1)  {
