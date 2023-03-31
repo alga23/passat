@@ -50,10 +50,8 @@ public class Vi{
 		if (preu > 0) {
 			this.preu = preu;
 			}
-		else {
-			this.preu = -1;
 		}
-	}
+		
 	public void setEstoc(int estoc){
 		if (estoc > 0) {
 			this.estoc = estoc;
