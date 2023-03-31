@@ -56,11 +56,8 @@ public class Vi{
 	}
 	public void setEstoc(int estoc){
 		if (estoc > 0) {
-			this.estoc= estoc;
+			this.estoc = estoc;
 			}
-		else {
-			this.estoc = -1;
-		}
 		}
 			
 	public static String normalitzaNom(String nom) {
