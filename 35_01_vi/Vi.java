@@ -5,7 +5,7 @@
 /les altres classes
 */
 public class Vi{
-	private String nom ="";
+	private String nom;
 	private int preu;
 	private int estoc = 0;
 	
