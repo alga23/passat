@@ -70,7 +70,7 @@ public class Vi{
 		
 	@Override
 	public String toString() {
-	return "\n    Vi: " + nom + "\n    Preu: " + preu+ "\n    Estoc: " + estoc + "\n";
+	return "\n    Vi:" + nom + "\n    Preu: " + preu+ "\n    Estoc: " + estoc + "\n";
 
 			   
 			  }
