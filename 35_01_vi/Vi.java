@@ -62,7 +62,7 @@ public class Vi{
 		}
 			
 	public boolean esValid() {
-		if (this.nom.equals("NOM NO VÀLID!") || this.preu == -1 || this.estoc == -1)  {
+		if (nom.equals("NOM NO VÀLID!") || preu == -1 || estoc == -1)  {
 			return false;
 			}
 		return true;
