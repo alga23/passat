@@ -5,7 +5,7 @@
 /les altres classes
 */
 public class Vi{
-	private String nom;
+	private final String nom;
 	private int preu;
 	private int estoc = 0;
 	
@@ -56,7 +56,8 @@ public class Vi{
             return "NOM NO VÀLID!";
             }
             else{
-		        return nom.replaceAll("\\p{javaSpaceChar}{2,}", " ");
+             nom=nom.trim();
+	    return nom.replaceAll("\\p{javaSpaceChar}{2,}", " ");
 			}
 		}
 			
