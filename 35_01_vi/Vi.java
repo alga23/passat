@@ -27,7 +27,13 @@ public class Vi{
 		
 	public Vi (String nom, int preu) {
 		this.nom = normalitzaNom(nom);
-		this.preu = preu;
+		if (preu < 0) {
+			this.preu = -1;
+			}
+		else {
+			this.preu = preu; 
+			}
+		
 		}
 		
 	public String getNom() {
