@@ -3,9 +3,189 @@
 /amb aquesta (com modificar vins,
 /eliminar-los o fegir-los)
 */
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
 
-                
-      ("No trobat");
+public class Entorn {
+    private final Botiga botiga = new Botiga();
+    public static void main(String[] args) throws IOException {
+        boolean continua = true;
+        int vinsContats = 0;
+        String file = "botiga.csv";
+        Entorn entorn = new Entorn();
+        FileWriter fitxer = new FileWriter(file,true);
+        fitxer.close();
+        BufferedReader input = new BufferedReader(new FileReader(file));
+        while (true) {
+            String vi = input.readLine();
+            if(vi==null){break;} 
+            String[] viArray = vi.split(";");
+            Vi nouVi = Vi.deArrayString(viArray);
+            if(nouVi == null){continue;}
+            else {
+                entorn.botiga.afegeix(nouVi);
+            }
+        }
+        input.close();
+        System.out.println("Celler La Bona Estrella. Escriviu ajuda per veure opcions.");
+        System.out.printf("Referències llegides: %s\n",contaVins());
+        while(continua) {
+            System.out.print("botiga> ");
+            String entrada = Entrada.readLine().strip();
+            if(entrada.isEmpty()){continue;}
+            if(entrada.equals("surt")){break;}
+            switch(entrada) {
+                case "ajuda" : mostraAjuda();
+                            break;
+                case "afegeix" : System.out.println("Comanda temporalment no disponible");//entorn.procesaAfegeix();
+                            break;
+                case "cerca" : entorn.procesaCerca();
+                            break;
+                case "modifica" : System.out.println("Comanda temporalment no disponible");//entorn.procesaModifica();
+                            break;
+                case "elimina" : System.out.println("Comanda temporalment no disponible");//entorn.procesaElimina();
+                            break;
+                default: mostraErrorComandaDesconeguda();
+            }
+        }
+        entorn.botiga.iniciaRecorregut();
+        entorn.guardaVins();
+        vinsContats = contaVins();
+        //System.out.printf("Referències guardades: %s\n",vinsContats);
+        System.out.println("adéu");
+    }
+
+    // Mostra ajuda
+    public static void mostraAjuda() {
+        System.out.println("Comandes disponibles:\najuda\ncerca\nsurt");
+    }
+    // Afegeix vi
+    /*
+    public void procesaAfegeix() {
+        String entrada = "";
+        System.out.print("nom (enter cancel·la)> ");
+        entrada = Entrada.readLine();
+        if(entrada.isBlank()) {return;}
+        System.out.print("preu (en cèntims)> ");
+        String preu = Entrada.readLine();
+        if (preu.isBlank()) {
+            preu = "0";
+        } else if (!UtilString.esEnter(preu)){
+            System.out.println("ERROR: el valor ha de ser un enter positiu");
+            return;
+        } else if (Integer.parseInt(preu)<0) {
+            System.out.println("ERROR: el valor ha de ser un enter positiu");
+            return;
+        } 
+        System.out.print("estoc (enter sense estoc)> ");
+        String stock = Entrada.readLine();
+        if (stock.isBlank()) {
+            stock = "0";
+        }else if (!UtilString.esEnter(stock)) {
+            System.out.println("ERROR: el valor ha de ser un enter positiu");
+            return;
+        } else if (Integer.parseInt(stock)<0) {
+            System.out.println("ERROR: el valor ha de ser un enter positiu");
+            return;
+        } 
+        Vi nouVi = new Vi(entrada,Integer.parseInt(preu),Integer.parseInt(stock));
+        if (botiga.afegeix(nouVi)==null) {
+            System.out.println("ERROR: no s'ha pogut afegir");
+        } else {
+            botiga.afegeix(nouVi);
+            System.out.println("Introduït:\n"+nouVi);
+        }
+    }
+    */
+    // Funcio cerca vi
+    public void procesaCerca() {
+        String entrada = "";
+        int precio = -1;
+        int estoc = -1;
+        String nom="";
+        String preu="";
+        String stock="";
+        String lloc="";
+        String deo="";
+        String tipus="";
+        String collita="";
+        System.out.print("ref> ");
+        entrada = Entrada.readLine();
+        if(entrada.equals("!")){return;}
+        if(!entrada.isBlank()) {
+            Vi cercat = botiga.cerca(entrada);
+            if (cercat == null) {
+                return; 
+                //System.out.println("No trobat");
+            } else {
+                System.out.println("Trobat:\n"+cercat);
+            }
+        } else {
+            while(true) {
+                System.out.print("nom> ");
+                nom = Entrada.readLine();
+                if(nom.equals("!")){break;}
+                System.out.print("preu max.> ");
+                preu = Entrada.readLine();
+                if(preu.equals("!")){break;}
+                if(UtilString.esEnter(preu)) {
+                    precio = Integer.parseInt(preu);
+                } else if (preu.isBlank()){
+                    precio = -1;
+                } else {
+                    System.out.println("ERROR: el valor ha de ser un enter positiu");
+                    return;
+                }
+                System.out.print("estoc min.> ");
+                stock = Entrada.readLine();
+                if(stock.equals("!")){break;}
+                if(UtilString.esEnter(stock)) {
+                    estoc = Integer.parseInt(stock);
+                }else if(stock.isBlank()) {
+                    estoc = -1;
+                } else {
+                    System.out.println("ERROR: el valor ha de ser un enter positiu");
+                    return;
+                }
+                System.out.print("lloc> ");
+                lloc = Entrada.readLine();
+                if(lloc.equals("!")){break;}
+                System.out.print("D.O.> ");
+                deo = Entrada.readLine();
+                if(deo.equals("!")){break;}
+                System.out.print("tipus> ");
+                tipus =Entrada.readLine();
+                if(tipus.equals("!")){break;}
+                System.out.print("collita> ");
+                collita = Entrada.readLine();
+                if(collita.equals("!")){break;}
+                break;
+            }
+            Vi viABuscar = new Vi(entrada,nom,precio,estoc,lloc,deo,tipus,collita);
+            Vi cercat = botiga.cerca(viABuscar);
+            if (cercat == null) {
+                cercat = botiga.cerca();
+                if(cercat !=null){
+                    System.out.println("Trobat:\n"+cercat);
+                }
+                return;
+            } else {
+                System.out.println("Trobat:\n"+cercat);
+            }
+        }
+    }
+    // Permite modificar vinos
+    public void procesaModifica() {
+        String entrada = "";
+        System.out.print("nom (enter cancel·la)> ");
+        entrada = Entrada.readLine();
+        if(entrada.isBlank()) {return;}
+        Vi cercat = botiga.cerca(entrada);
+        if(cercat==null) {
+            System.out.println("No trobat");
             return;
         }
         System.out.printf("preu (enter %s)> ",cercat.getPreu());
@@ -105,4 +285,7 @@
         output.close();
     }
 }
+    
+        
+            
 
