@@ -19,7 +19,7 @@ public class Botiga {
 
     // Modul que afegeix vins
     public Vi afegeix(Vi nouVi) {
-        if (!viEnLlista(vins, nouVi.getNom())) {
+        if (!viEnLlista(vins, nouVi.getRef(),nouVi.getNom())) {
             for(int i=0;i<vins.length;i++) {
                 if(vins[i]==null) {
                     if(nouVi.esValid()) {
@@ -37,12 +37,12 @@ public class Botiga {
     }
 
     // Elimina vi
-    public Vi elimina(String nomVi) {
-        nomVi = normalitzaNom(nomVi);
+    public Vi elimina(String ref) {
+        ref = Vi.normalitzaString(ref);
         for(int i=0;i<vins.length;i++) {
             if (vins[i]==null){
                 continue;
-            } else if((vins[i].getNom().toLowerCase()).equals(nomVi.toLowerCase()) && vins[i].getEstoc() <= 0 ) {
+            } else if(vins[i].getRef().equalsIgnoreCase(ref) && vins[i].getEstoc() <= 0) {
                 Vi viEliminat = vins[i];
                 vins[i] = null;
                 return viEliminat;
@@ -50,20 +50,44 @@ public class Botiga {
         }
         return null;
     }
-
-    public Vi cerca(String nomVi) {
-        nomVi = normalitzaNom(nomVi);
+    // Cerca vi segons la referencia
+    public Vi cerca(String ref) {
+        ref = Vi.normalitzaString(ref);
+        if(vins.length == 0) {return null;}
         for(int i=0;i<vins.length;i++) {
             if(vins[i] == null) {
                 continue;
-            } else if (vins[i].getNom().toLowerCase().equals(nomVi.toLowerCase())) {
+            } else if (vins[i].getRef()==null){
+                continue;
+            } else if (vins[i].getRef().toLowerCase().equals(ref.toLowerCase())) {
                 return vins[i];
             }
         }
         return null;
-    } 
+    }
+    public Vi cerca() {
+        if(vins[0]!=null){return vins[0];}
+        return null;
+    }
+    // Busca un vino comparando con una instancia de vino
+    public Vi cerca (Vi viBuscat) {
+        for(Vi vi: vins) {
+            if(vi == null) {continue;}
+            if(!(viBuscat.getRef()==null) && !(viBuscat.getRef().equalsIgnoreCase(vi.getRef()))){continue;}
+            if(!(viBuscat.getNom()==null) && !(viBuscat.getNom().equalsIgnoreCase(vi.getNom()))){continue;}
+            if((viBuscat.getPreu()!=-1) && (viBuscat.getPreu() < vi.getPreu())){continue;}
+            if((viBuscat.getEstoc()!=-1) && (viBuscat.getEstoc() > vi.getEstoc())){continue;}
+            if(!(viBuscat.getLloc() ==null) && !(viBuscat.getLloc().equalsIgnoreCase(vi.getLloc()))){continue;}
+            if(!(viBuscat.getOrigen()==null) && !(viBuscat.getOrigen().equalsIgnoreCase(vi.getOrigen()))){continue;}
+            if(!(viBuscat.getTipus()==null) && !(viBuscat.getTipus().equalsIgnoreCase(vi.getTipus()))){continue;}
+            if(!(viBuscat.getCollita()==null) && !(viBuscat.getCollita().equalsIgnoreCase(vi.getCollita()))){continue;}
+            return vi;
+        }
+        return null;
+    }
+    // Cerca vi comparant amb una instancia de Vip 
     public Vi modificaVi(String nom, int preu, int estoc) {
-        nom = normalitzaNom(nom);
+        nom = Vi.normalitzaString(nom);
         for(int i=0;i<vins.length;i++) {
             if(vins[i] == null) {
                 continue;
@@ -77,25 +101,17 @@ public class Botiga {
     }  
 
     // Comprova si el vi esta en la llista
-    private boolean viEnLlista (Vi[] vins, String nomVi) {
+    private boolean viEnLlista (Vi[] vins, String ref, String nom) {
         for(int i=0;i<vins.length;i++) {
             if(vins[i] == null) {
                 continue;
-            } else if (vins[i].getNom().equals(nomVi)) {
+            } else if (vins[i].getRef().equals(ref)) {
                 return true;
+            } else if (vins[i].getNom().equals(nom)){
+                return true;    
             }
         }
         return false;
-    }
-    // Normaliza nombres
-    public static String normalitzaNom(String nom) {
-        if (nom.isBlank()) {
-            return "NOM NO VÀLID!";
-        }
-        nom = nom.trim();
-        nom = String.format(nom.replaceAll(" +"," "));
-        return nom;
-        
     }
     public void iniciaRecorregut() {
         posicioArray = -1;
@@ -103,7 +119,7 @@ public class Botiga {
     public Vi getSeguent() {
         while (true) {
             posicioArray = posicioArray + 1;
-            if(posicioArray >= vins.length) {return null;}
+            if(posicioArray == vins.length) {return null;}
             if (vins[posicioArray]==null) {continue;} 
             else {
             return vins[posicioArray];
@@ -111,6 +127,8 @@ public class Botiga {
         }
     }
 }
+         
+
           
         
 		  
