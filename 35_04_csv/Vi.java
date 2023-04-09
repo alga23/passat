@@ -1,0 +1,108 @@
+/*Classe vi que yutilitzarem per
+/ a la botig de la senyora.
+/El vi és el més esencial,
+/i serà la fundació de 
+/les altres classes
+*/
+public class Vi{
+	private final String nom;
+	private int preu;
+	private int estoc = 0;
+	
+	public Vi (String nom, int preu, int estoc){
+		this.nom = normalitzaNom(nom);
+		if (preu < 0) {
+			this.preu = -1;
+			}
+		else {
+			this.preu = preu; 
+			}
+		if (estoc < 0) {
+			this.estoc = -1;
+		}else {
+			this.estoc= estoc; 
+			}
+		
+		}
+		
+	public Vi (String nom, int preu) {
+		this.nom = normalitzaNom(nom);
+		if (preu < 0) {
+			this.preu = -1;
+			}
+		else {
+			this.preu = preu; 
+			}
+		
+		}
+		
+	public String getNom() {
+		return nom;
+		}
+	public int getPreu() {
+		return preu;
+		}
+	public int getEstoc() {
+		return estoc;
+		}
+		
+	public void setPreu (int preu) {
+		if (preu > 0) {
+			this.preu = preu;
+			}
+		}
+		
+	public void setEstoc(int estoc){
+		if (estoc > 0) {
+			this.estoc = estoc;
+			}
+		}
+			
+	public static String normalitzaNom(String nom) {
+	 if (nom.isEmpty() || nom.isBlank() || nom == null) {
+            return "NOM NO VÀLID!";
+            }
+            else{
+             nom=nom.trim();
+	    return nom.replaceAll("\\p{javaSpaceChar}{2,}", " ");
+			}
+		}
+			
+	public boolean esValid() {
+		if (nom.equals("NOM NO VÀLID!") || preu == -1 || estoc == -1)  {
+			return false;
+			}
+		return true;
+		}
+	 public static Vi deArrayString(String[] vins) {
+		if(vins.length != 3){return null;}
+		if(vins[0].isBlank()|| vins[0]==null){return null;}
+		if(!UtilString.esEnter(vins[1])|| vins[1]==null){return null;}
+		if(!UtilString.esEnter(vins[2])||vins[2]==null){return null;}
+		Vi nouVi = new Vi(normalitzaNom(vins[0]),Integer.parseInt(vins[1]),Integer.parseInt(vins[2]));
+		if (nouVi.esValid()) {return nouVi;}
+		else {return null;}
+	    }
+
+	    public String[] aArrayString() {
+		String[] viString ={ getNom(),Integer.toString(getPreu()),Integer.toString(getEstoc())};
+		return viString;
+		
+	    }
+		
+		
+	@Override
+	public String toString() {
+	return "\n    Vi: " + nom + "\n    Preu: " + preu+ "\n    Estoc: " + estoc + "\n";
+
+			   
+			  }
+		}
+			    
+			
+		
+			
+				
+	
+		
+	 
