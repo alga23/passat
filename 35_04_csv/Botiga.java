@@ -5,36 +5,38 @@
 /(afegir, quitar...)
 */
 public class Botiga {
-	private final int DEFAULT_MAX_VINS = 10;
-	private Vi[] vins;
-	
-	public Botiga() {
-		vins = new Vi[DEFAULT_MAX_VINS];
-		}
-	public Botiga( int maxVins) {
-		vins = new Vi[maxVins];
+    private int DEFAULT_MAX_VINS = 10;
+    private Vi[] vins;
+    private int posicioArray = -1;
 
-		}
-	
-	public Vi afegeix(Vi nouVi) {
-		if (!viEnLlista(vins, nouVi.getNom())) {
-		    for(int i=0;i<vins.length;i++) {
-		        if(vins[i]==null) {
-		            if(nouVi.esValid()) {
-		                vins[i] = nouVi;
-		                return vins[i];
-		            }
-		        } else {
-		            continue;
-		        }
-		    }
-		    return null;
-		} else {
-		    return null;
-		}
-	    }
+    public Botiga() {
+        vins = new Vi[DEFAULT_MAX_VINS];
+    }
+    // Constructor sense vins per defecte
+    public Botiga(int maxVins) {
+        vins = new Vi[maxVins];
+    }
 
+    // Modul que afegeix vins
+    public Vi afegeix(Vi nouVi) {
+        if (!viEnLlista(vins, nouVi.getNom())) {
+            for(int i=0;i<vins.length;i++) {
+                if(vins[i]==null) {
+                    if(nouVi.esValid()) {
+                        vins[i] = nouVi;
+                        return vins[i];
+                    }
+                } else {
+                    continue;
+                }
+            }
+            return null;
+        } else {
+            return null;
+        }
+    }
 
+    // Elimina vi
     public Vi elimina(String nomVi) {
         nomVi = normalitzaNom(nomVi);
         for(int i=0;i<vins.length;i++) {
@@ -60,7 +62,6 @@ public class Botiga {
         }
         return null;
     } 
-
     public Vi modificaVi(String nom, int preu, int estoc) {
         nom = normalitzaNom(nom);
         for(int i=0;i<vins.length;i++) {
@@ -75,7 +76,7 @@ public class Botiga {
         return null;
     }  
 
-
+    // Comprova si el vi esta en la llista
     private boolean viEnLlista (Vi[] vins, String nomVi) {
         for(int i=0;i<vins.length;i++) {
             if(vins[i] == null) {
@@ -86,7 +87,7 @@ public class Botiga {
         }
         return false;
     }
-
+    // Normaliza nombres
     public static String normalitzaNom(String nom) {
         if (nom.isBlank()) {
             return "NOM NO VÀLID!";
@@ -109,4 +110,6 @@ public class Botiga {
         }
     }
 }
+          
+        
 		  
