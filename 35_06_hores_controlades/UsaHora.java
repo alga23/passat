@@ -1,3 +1,7 @@
+/*Classe UsaHora que utilitzarem per
+/veure si hem codificat bé totes les propietats de
+/la nostra classe Hora
+*/
 public class UsaHora {
     public static void main(String[] args) {
         Hora hora = new Hora();
