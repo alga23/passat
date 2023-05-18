@@ -7,13 +7,10 @@ import java.util.LinkedList;
 /(afegir, quitar...)
 */
 
-
-
-import java.util.LinkedList;
 public class Botiga {
     private final int DEFAULT_MAX_VINS=10;
    // private Vi vins[];
-    List <Vi>vins;
+    LinkedList <Vi>vins;
 
     public Botiga() {       
         vins = new LinkedList<>();
@@ -95,9 +92,7 @@ public class Botiga {
         return vinoADevolver;
     }
 
-    public List<Vi> cerca(Vi plantilla){
-
 
     }
-}
+
 

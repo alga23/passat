@@ -3,7 +3,6 @@
 /amb aquesta (com modificar vins,
 /eliminar-los o fegir-los)
 */
-
 public class Entorn {
   
     static String comanda;
@@ -235,5 +234,24 @@ public class Entorn {
         return null;
     }
 }
+
+
+            
+
+                
+
+   
+
+   
+               
+        
+                  
+                                        
+           
+                     
+
+
+    
+          
 
 
