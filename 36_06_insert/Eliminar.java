@@ -16,3 +16,4 @@ public class Eliminar{
         System.out.println("Finalment tanquem la connexió amb la base de dades: ");
         zoo.desconnecta();
     }
+   }
